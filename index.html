@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Watch — LLM Release Cadence Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-title">
+      <span class="logo-mark">◈</span>
+      Model Watch
+    </div>
+    <p class="tagline">Is now a good time to build on this model, or is a new version about to drop?</p>
+  </div>
+</header>
+
+<section class="legend-bar">
+  <div class="legend-inner">
+    <div class="legend-item">
+      <span class="legend-dot buy-now"></span>
+      <span class="legend-label">BUY NOW</span>
+      <span class="legend-desc">Fresh release — next one far away</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot caution"></span>
+      <span class="legend-label">CAUTION</span>
+      <span class="legend-desc">Midway through average cycle</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot wait"></span>
+      <span class="legend-label">WAIT</span>
+      <span class="legend-desc">Update likely imminent</span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="filters">
+    <div class="filter-inner">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="frontier">Frontier</button>
+      <button class="filter-tab" data-filter="open">Open Weight</button>
+      <button class="filter-tab" data-filter="chinese">Chinese Labs</button>
+    </div>
+  </section>
+
+  <section class="cards-section">
+    <div id="cards-grid" class="cards-grid"></div>
+  </section>
+
+  <section class="timeline-section">
+    <h2 class="section-title">Release Timeline</h2>
+    <div id="timeline-container" class="timeline-container"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>Model Watch</span>
+    <span class="footer-sep">·</span>
+    <a href="https://github.com/chadluo/model-watch" target="_blank" rel="noopener">GitHub</a>
+    <span class="footer-sep">·</span>
+    <span>Verdicts computed client-side from <code>data.js</code></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
