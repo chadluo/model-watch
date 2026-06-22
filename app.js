@@ -4,7 +4,7 @@ function computeMetrics(model) {
   const daysSinceLast = (Date.now() - new Date(latest.date)) / 86400000;
 
   if (releases.length < 2) {
-    return { avgCycleDays: null, latestRelease: latest, daysSinceLast, pct: 0, verdict: "BUY NOW" };
+    return { avgCycleDays: null, latestRelease: latest, daysSinceLast, pct: 0, verdict: "CURRENT" };
   }
 
   let totalGap = 0;
@@ -14,11 +14,11 @@ function computeMetrics(model) {
   const avgCycleDays = totalGap / (releases.length - 1);
   const pct = daysSinceLast / avgCycleDays;
 
-  const verdict = pct < 0.5 ? "BUY NOW" : pct < 0.8 ? "CAUTION" : "WAIT";
+  const verdict = pct < 0.5 ? "CURRENT" : pct < 0.8 ? "MID-CYCLE" : "UPDATE DUE";
   return { avgCycleDays, latestRelease: latest, daysSinceLast, pct, verdict };
 }
 
-const VERDICT_COLOR = { "BUY NOW": "#22c55e", "CAUTION": "#f59e0b", "WAIT": "#ef4444" };
+const VERDICT_COLOR = { "CURRENT": "#22c55e", "MID-CYCLE": "#f59e0b", "UPDATE DUE": "#ef4444" };
 
 function fmtDate(str) {
   return new Date(str).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
