@@ -213,6 +213,70 @@ const MODELS = [
     notes: "Zhipu has accelerated release cadence significantly through 2025–2026, now at rough monthly intervals."
   },
   {
+    id: "xiaomi",
+    name: "Xiaomi MiMo",
+    lab: "Xiaomi",
+    labColor: "#ff6900",
+    icon: "◎",
+    tier: "chinese",
+    description: "Xiaomi's MiMo series of open-source and frontier models, focused on agentic tasks, software engineering, and omnimodal perception.",
+    releases: [
+      { version: "MiMo-V2-Flash", date: "2025-12-14", note: "Open-source MoE; ranked #1 open-source on SWE-bench; 256k context" },
+      { version: "MiMo-V2-Pro + V2-Omni", date: "2026-03-18", note: "Pro: 1T+ params, 1.05M context, agentic; Omni: image/video/audio, 256k context" },
+      { version: "MiMo-V2.5 + V2.5-Pro", date: "2026-04-22", note: "Native omnimodal; V2.5-Pro is flagship for complex engineering; 1.05M context" },
+    ],
+    notes: "Xiaomi entered the frontier LLM space in late 2025 with a focus on agentic and omnimodal capabilities."
+  },
+  {
+    id: "minimax",
+    name: "MiniMax",
+    lab: "MiniMax",
+    labColor: "#6b4de6",
+    icon: "⬙",
+    tier: "chinese",
+    description: "MiniMax's M-series models, spanning long-context reasoning, office productivity, roleplay, and multimodal agentic workflows.",
+    releases: [
+      { version: "MiniMax-01", date: "2025-01-15", note: "456B total params; 1M context; text + image understanding" },
+      { version: "MiniMax M1", date: "2025-06-17", note: "Reasoning model; hybrid MoE architecture; 1M context" },
+      { version: "MiniMax M2", date: "2025-10-23", note: "205K context; end-to-end coding and agentic workflows" },
+      { version: "MiniMax M2.1", date: "2025-12-23", note: "10B activated params; multilingual coding; 205K context" },
+      { version: "MiniMax M2-her", date: "2026-01-23", note: "Dialogue-first; optimized for roleplay and character-driven chat; 66K context" },
+      { version: "MiniMax M2.5", date: "2026-02-12", note: "Office productivity (Word, Excel, PowerPoint); strong SWE benchmarks; 205K context" },
+      { version: "MiniMax M2.7", date: "2026-03-18", note: "Multi-agent collaboration for complex real-world tasks; 205K context" },
+      { version: "Hailuo 2.3", date: "2026-04-20", note: "Video generation; text-to-video and image-to-video" },
+      { version: "MiniMax M3", date: "2026-05-31", note: "Multimodal (text/image/video input); agentic and coding focus; 1.05M context" },
+    ],
+    notes: "MiniMax has maintained a near-monthly cadence since late 2025, expanding from text into video generation and omnimodal capabilities."
+  },
+  {
+    id: "nex-agi",
+    name: "Nex AGI",
+    lab: "Nex AGI",
+    labColor: "#0ea5e9",
+    icon: "◉",
+    tier: "chinese",
+    description: "Nex AGI's post-trained models built on open foundations, focused on agent autonomy, tool use, and real-world productivity.",
+    releases: [
+      { version: "Nex N1 (DeepSeek V3.1)", date: "2025-12-08", note: "Post-trained on DeepSeek V3.1; agent autonomy, tool use, coding and HTML generation; 8K context" },
+      { version: "Nex N2-Pro", date: "2026-06-08", note: "MoE built on Qwen3.5; 17B active / 397B total; deep research and agentic workflows; 262K context" },
+    ],
+    notes: "Nex AGI specializes in post-training open-weight models for agentic use cases."
+  },
+  {
+    id: "stepfun",
+    name: "StepFun",
+    lab: "StepFun",
+    labColor: "#10b981",
+    icon: "▲",
+    tier: "chinese",
+    description: "StepFun's Step series of sparse MoE models, combining multimodal perception with selectable reasoning levels for speed-cost flexibility.",
+    releases: [
+      { version: "Step 3.5 Flash", date: "2026-01-29", note: "Open-source sparse MoE; 196B total / 11B active per token; 262K context" },
+      { version: "Step 3.7 Flash", date: "2026-05-28", note: "Multimodal with vision encoder; selectable reasoning levels; 256K context" },
+    ],
+    notes: "StepFun focuses on efficient sparse MoE inference with a consistent 196B/11B active parameter footprint."
+  },
+  {
     id: "mistral",
     name: "Mistral",
     lab: "Mistral AI",
