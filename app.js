@@ -91,11 +91,8 @@ function renderTimeline() {
     }).join("");
 }
 
-let activeFilter = "all";
-
 function refresh() {
   const items = MODELS
-    .filter(m => activeFilter === "all" || m.tier === activeFilter)
     .map(m => ({ model: m, metrics: computeMetrics(m) }))
     .sort((a, b) => b.metrics.pct - a.metrics.pct);
 
@@ -103,14 +100,6 @@ function refresh() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".filter-tab").forEach(tab => {
-    tab.addEventListener("click", () => {
-      activeFilter = tab.dataset.filter;
-      document.querySelectorAll(".filter-tab").forEach(t => t.classList.toggle("active", t === tab));
-      refresh();
-    });
-  });
-
   document.getElementById("timeline-container").innerHTML = renderTimeline();
   refresh();
 });
