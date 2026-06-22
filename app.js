@@ -94,7 +94,7 @@ function renderTimeline() {
 function refresh() {
   const items = MODELS
     .map(m => ({ model: m, metrics: computeMetrics(m) }))
-    .sort((a, b) => b.metrics.pct - a.metrics.pct);
+    .sort((a, b) => new Date(b.metrics.latestRelease.date) - new Date(a.metrics.latestRelease.date));
 
   document.getElementById("table-container").innerHTML = renderTable(items);
 }
