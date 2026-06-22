@@ -37,7 +37,9 @@ function renderTable(items) {
   <td>${Math.round(m.daysSinceLast)}d</td>
   <td>${barVal !== null ? `<progress value="${barVal}" max="1"></progress>` : ''}</td>
   <td>${hasCycle ? Math.round(m.avgCycleDays) + 'd' : ''}</td>
-  <td style="color:${c}">${m.verdict}</td>
+  <td>${m.latestRelease.version === "Claude Fable 5"
+    ? `<span style="color:var(--text-muted)" title="Suspended — not available for use">?</span>`
+    : `<span style="color:${c}">${m.verdict}</span>`}</td>
 </tr>`;
   }).join('');
 
