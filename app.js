@@ -24,35 +24,39 @@ function fmtDate(str) {
   return new Date(str).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 }
 
-function renderCard(model, m) {
-  const c = VERDICT_COLOR[m.verdict];
-  const barPct = Math.min(m.pct * 100, 100).toFixed(1);
+function renderTable(items) {
+  const rows = items.map(({ model, metrics: m }) => {
+    const c = VERDICT_COLOR[m.verdict];
+    const hasCycle = m.avgCycleDays !== null;
+    const barVal = hasCycle ? Math.min(m.pct, 1).toFixed(2) : null;
+    return `
+<tr data-tier="${model.tier}">
+  <td style="color:${model.labColor}">${model.lab}</td>
+  <td>${model.name}</td>
+  <td><span class="td-version">${m.latestRelease.version}</span><span class="td-date">${fmtDate(m.latestRelease.date)}</span></td>
+  <td>${Math.round(m.daysSinceLast)}d</td>
+  <td>${barVal !== null ? `<progress value="${barVal}" max="1"></progress>` : ''}</td>
+  <td>${hasCycle ? Math.round(m.avgCycleDays) + 'd' : ''}</td>
+  <td style="color:${c}">${m.verdict}</td>
+</tr>`;
+  }).join('');
+
   return `
-<div class="card" data-tier="${model.tier}">
-  <div class="card-accent" style="background:${c}"></div>
-  <div class="card-header">
-    <span class="lab-badge" style="--lab:${model.labColor}">
-      <span class="lab-icon">${model.icon}</span>${model.lab}
-    </span>
-    <span class="verdict-badge" style="--vc:${c}">${m.verdict}</span>
-  </div>
-  <h2 class="card-name">${model.name}</h2>
-  <p class="card-desc">${model.description}</p>
-  <div class="latest">
-    <span class="latest-label">LATEST</span>
-    <span class="latest-version">${m.latestRelease.version}</span>
-    <span class="latest-date">${fmtDate(m.latestRelease.date)}</span>
-  </div>
-  <div class="meter">
-    <div class="meter-labels">
-      <span>${Math.round(m.daysSinceLast)}d since release</span>
-      <span>avg cycle: ${Math.round(m.avgCycleDays ?? 0)}d</span>
-    </div>
-    <div class="meter-track">
-      <div class="meter-fill" style="width:${barPct}%;background:${c}"></div>
-    </div>
-  </div>
-  ${model.notes ? `<p class="card-notes">${model.notes}</p>` : ""}
+<div class="table-wrapper">
+  <table class="models-table">
+    <thead>
+      <tr>
+        <th>Developer</th>
+        <th>Model</th>
+        <th>Latest Release</th>
+        <th>Since</th>
+        <th>Meter</th>
+        <th>Avg Cycle</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>${rows}</tbody>
+  </table>
 </div>`;
 }
 
@@ -95,9 +99,7 @@ function refresh() {
     .map(m => ({ model: m, metrics: computeMetrics(m) }))
     .sort((a, b) => b.metrics.pct - a.metrics.pct);
 
-  document.getElementById("cards-grid").innerHTML = items
-    .map(({ model, metrics }) => renderCard(model, metrics))
-    .join("");
+  document.getElementById("table-container").innerHTML = renderTable(items);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
