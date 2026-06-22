@@ -63,6 +63,8 @@ function renderTable(items) {
 }
 
 function renderTimeline() {
+  const currentYear = new Date().getFullYear();
+
   const all = MODELS
     .flatMap(m => m.releases.map(r => ({ ...r, model: m })))
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -74,13 +76,14 @@ function renderTimeline() {
     (groups[key] = groups[key] || []).push(r);
   });
 
-  return Object.entries(groups)
-    .sort(([a], [b]) => b.localeCompare(a))
-    .slice(0, 20)
-    .map(([key, releases]) => {
-      const [y, mo] = key.split("-");
-      const label = new Date(+y, +mo - 1).toLocaleDateString("en-US", { month: "long", year: "numeric" });
-      const items = releases.map(r => `
+  const sorted = Object.entries(groups).sort(([a], [b]) => b.localeCompare(a));
+  const current = sorted.filter(([key]) => key.startsWith(currentYear));
+  const older = sorted.filter(([key]) => !key.startsWith(currentYear));
+
+  function renderMonth([key, releases]) {
+    const [y, mo] = key.split("-");
+    const label = new Date(+y, +mo - 1).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    const items = releases.map(r => `
 <div class="tl-item">
   <span class="tl-dot" style="background:${r.model.labColor}"></span>
   <div class="tl-body">
@@ -89,8 +92,18 @@ function renderTimeline() {
     ${r.note ? `<span class="tl-note">${r.note}</span>` : ""}
   </div>
 </div>`).join("");
-      return `<div class="tl-month"><div class="tl-month-label">${label}</div><div class="tl-items">${items}</div></div>`;
-    }).join("");
+    return `<div class="tl-month"><div class="tl-month-label">${label}</div><div class="tl-items">${items}</div></div>`;
+  }
+
+  const currentHtml = current.map(renderMonth).join("");
+  if (!older.length) return currentHtml;
+
+  const oldestYear = older.at(-1)[0].split("-")[0];
+  return `${currentHtml}
+<details class="tl-older">
+  <summary class="tl-older-summary">${oldestYear}–${currentYear - 1}</summary>
+  <div class="tl-older-content">${older.map(renderMonth).join("")}</div>
+</details>`;
 }
 
 function refresh() {

@@ -191,6 +191,24 @@ progress {
   color: var(--text-muted);
 }
 
+.tl-older-summary {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  list-style: none;
+}
+.tl-older-summary::-webkit-details-marker { display: none; }
+.tl-older-summary:hover { color: var(--text-dim); }
+.tl-older-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
