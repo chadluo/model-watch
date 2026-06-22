@@ -98,12 +98,21 @@ function renderTimeline() {
   const currentHtml = current.map(renderMonth).join("");
   if (!older.length) return currentHtml;
 
-  const oldestYear = older.at(-1)[0].split("-")[0];
-  return `${currentHtml}
+  const byYear = {};
+  older.forEach(entry => {
+    const y = entry[0].split("-")[0];
+    (byYear[y] = byYear[y] || []).push(entry);
+  });
+
+  const olderHtml = Object.entries(byYear)
+    .sort(([a], [b]) => b - a)
+    .map(([year, months]) => `
 <details class="tl-older">
-  <summary class="tl-older-summary">${oldestYear}–${currentYear - 1}</summary>
-  <div class="tl-older-content">${older.map(renderMonth).join("")}</div>
-</details>`;
+  <summary class="tl-older-summary">${year}</summary>
+  <div class="tl-older-content">${months.map(renderMonth).join("")}</div>
+</details>`).join("");
+
+  return currentHtml + olderHtml;
 }
 
 function refresh() {
