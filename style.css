@@ -17,7 +17,7 @@
   --sans: 'Inter', sans-serif;
 }
 
-html { font-size: 15px; }
+html { font-size: 16px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -48,7 +48,7 @@ header {
 }
 .logo-mark { color: var(--amber); font-size: 1.1rem; }
 .tagline {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--text-muted);
   font-family: var(--mono);
 }
@@ -71,7 +71,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 .legend-dot {
   width: 8px;
@@ -85,7 +85,7 @@ header {
 .legend-label {
   font-family: var(--mono);
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
 }
 .legend-desc { color: var(--text-muted); }
@@ -102,11 +102,11 @@ header {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 1rem;
 }
 .models-table thead th {
   text-align: left;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -139,7 +139,7 @@ progress {
   max-width: 1200px;
   margin: 0 auto 1.25rem;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -155,7 +155,7 @@ progress {
 .tl-month { display: flex; gap: 1.5rem; }
 .tl-month-label {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-muted);
   min-width: 110px;
@@ -177,17 +177,17 @@ progress {
 .tl-body { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
 .tl-version {
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text);
 }
 .tl-date {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 .tl-note {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-muted);
 }
 
@@ -203,7 +203,7 @@ footer {
   align-items: center;
   gap: 0.625rem;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 .footer-inner a { color: var(--text-muted); text-decoration: underline; }
