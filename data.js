@@ -25,6 +25,7 @@ const MODELS = [
       { version: "GPT-5.3 Instant", date: "2026-03-01", note: "Fast-answer variant of 5.3" },
       { version: "GPT-5.4", date: "2026-03-01", note: "Enterprise-focused; improved autonomous computer operation" },
       { version: "GPT-5.5", date: "2026-04-23", note: "Complex professional multi-step work; includes Cyber variant" },
+      { version: "GPT-5.6 Sol / Terra / Luna", date: "2026-06-26", note: "Three-tier family: Sol (flagship reasoning), Terra (balanced), Luna (fast/low-cost); limited preview to government-approved partners" },
     ],
     notes: "OpenAI has accelerated to near-monthly releases across both GPT and o-series lines since mid-2025."
   },
