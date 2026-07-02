@@ -45,6 +45,10 @@ order is required by `computeMetrics`.
 
 Models with only one release get `verdict = "CURRENT"` with no cycle bar.
 
+Special case: if the latest release entry has `suspended: true`, the verdict cell renders `?` (suspended model, not
+available) instead of the computed verdict. Set this flag on a release when a model is pulled from availability, and
+clear it (or omit it) once the model is restored.
+
 `renderTimeline()` — builds a reverse-chronological timeline grouped by month. Current-year months render inline; older
 months collapse into `<details>` elements grouped by year.
 
