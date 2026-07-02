@@ -45,10 +45,6 @@ order is required by `computeMetrics`.
 
 Models with only one release get `verdict = "CURRENT"` with no cycle bar.
 
-Special case: if the latest release version is `"Claude Fable 5"`, the verdict cell renders `?` (suspended model, not
-available). This hardcoded check in `renderTable` should be generalized if more models need this treatment — add a
-`suspended: true` flag to the release entry instead.
-
 `renderTimeline()` — builds a reverse-chronological timeline grouped by month. Current-year months render inline; older
 months collapse into `<details>` elements grouped by year.
 

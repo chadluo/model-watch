@@ -37,9 +37,7 @@ function renderTable(items) {
   <td>${Math.round(m.daysSinceLast)}d</td>
   <td>${barVal !== null ? `<progress value="${barVal}" max="1"></progress>` : ''}</td>
   <td>${hasCycle ? Math.round(m.avgCycleDays) + 'd' : ''}</td>
-  <td>${m.latestRelease.suspended
-    ? `<span style="color:var(--text-muted)" title="Suspended — not available for use">?</span>`
-    : `<span style="color:${c}">${m.verdict}</span>`}</td>
+  <td><span style="color:${c}">${m.verdict}</span></td>
 </tr>`;
   }).join('');
 
