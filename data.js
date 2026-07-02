@@ -95,9 +95,9 @@ const MODELS = [
     tier: "frontier",
     description: "Anthropic's newest, most capable widely released model line, succeeding the Opus tier for the most demanding reasoning and long-horizon agentic work.",
     releases: [
-      { version: "Claude Fable 5", date: "2026-06-09", suspended: true, note: "First 'Mythos-class' model for general users; suspended June 12 for safety review" },
+      { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 for safety review, restored July 2026 with promotional access" },
     ],
-    notes: "Claude Fable 5 is a single-release line so far, and its only release is currently suspended."
+    notes: "Claude Fable 5 is a single-release line so far."
   },
   {
     id: "gemini",
