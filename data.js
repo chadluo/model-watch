@@ -343,4 +343,25 @@ const MODELS = [
     ],
     notes: "Mistral alternates between open-weight and proprietary releases. Magistral marks their entry into the reasoning model tier."
   },
+  {
+    id: "kimi",
+    name: "Kimi",
+    lab: "Moonshot AI",
+    labColor: "#16b8a6",
+    icon: "☾",
+    tier: "chinese",
+    description: "Moonshot AI's Kimi series, known for pioneering long-context windows in China and, since K2, for open-sourcing trillion-parameter MoE agentic models.",
+    releases: [
+      { version: "Kimi (initial release)", date: "2023-11-16", note: "Public web release; 128K token lossless context, first at that scale" },
+      { version: "Kimi K1.5", date: "2025-01-20", note: "Reasoning model; claimed o1-level math, coding, and multimodal performance" },
+      { version: "Kimi K2", date: "2025-07-11", note: "1T param MoE (32B active), 128K context; open-sourced under modified MIT license" },
+      { version: "Kimi K2-0905", date: "2025-09-09", note: "Updated K2 checkpoint; improved coding, context extended 128K to 256K" },
+      { version: "Kimi K2 Thinking", date: "2025-11-06", note: "First open-weight 'thinking while using tools' agent; beat GPT-5/Claude Sonnet 4.5 on HLE, BrowseComp, SWE-bench Verified" },
+      { version: "Kimi K2.5", date: "2026-01-27", note: "Native multimodal upgrade; MoonViT vision encoder; Agent Swarm multi-agent execution" },
+      { version: "Kimi K2.6", date: "2026-04-20", note: "Agent Swarm scaled to 300 sub-agents/4,000 steps; up to 13hr continuous coding" },
+      { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
+      { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
+    ],
+    notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
+  },
 ];
