@@ -119,6 +119,7 @@ const MODELS = [
       { version: "Gemini 3 Pro", date: "2025-11-18", note: "Gemini 3 launch; immediate availability across all platforms" },
       { version: "Gemini 3 Flash", date: "2025-12-01", note: "New default model, replacing Gemini 2.5 Flash" },
       { version: "Gemini 3.1 Pro", date: "2026-02-19", note: "77.1% ARC-AGI-2 score; preview release" },
+      { version: "Gemini 3.6 Flash + 3.5 Flash-Lite", date: "2026-07-21", note: "3.6 Flash: workhorse update, 17% fewer output tokens than 3.5 Flash; 3.5 Flash-Lite: new low-latency/high-throughput leader at 350 tok/s. Gemini 3.5 Flash Cyber (security vuln detection/patching) also announced but limited to governments and trusted partners in a pilot, not broadly available" },
     ],
     notes: "Gemini has accelerated to near-quarterly major releases. Cadence tied to Google I/O and DeepMind research cycles."
   },
