@@ -100,28 +100,55 @@ const MODELS = [
     notes: "Claude Fable 5 is a single-release line so far."
   },
   {
-    id: "gemini",
-    name: "Google Gemini",
+    id: "gemini-pro",
+    name: "Gemini Pro",
     lab: "Google DeepMind",
     labColor: "#4285f4",
     icon: "✦",
     tier: "frontier",
-    description: "Google DeepMind's Gemini series, spanning 1.0 through 3.x, tightly integrated with Google Search and Workspace.",
+    description: "Google DeepMind's flagship Gemini tier, succeeding Ultra as the top of the lineup — tightly integrated with Google Search and Workspace.",
     releases: [
       { version: "Gemini 1.0 Pro", date: "2023-12-06", note: "Launched in Bard; Ultra/Pro/Nano three-tier family" },
       { version: "Gemini 1.0 Ultra", date: "2024-02-08", note: "Public Ultra launch via Gemini app, replacing Bard" },
       { version: "Gemini 1.5 Pro", date: "2024-02-15", note: "1M token context (~1hr video or 30k lines of code); limited preview" },
+      { version: "Gemini 2.0 Pro", date: "2025-02-05", note: "2.0 general availability; Pro variant" },
+      { version: "Gemini 2.5 Pro", date: "2025-03-25", note: "First Gemini thinking model; chain-of-thought reasoning" },
+      { version: "Gemini 3 Pro", date: "2025-11-18", note: "Gemini 3 launch; immediate availability across all platforms" },
+      { version: "Gemini 3.1 Pro", date: "2026-02-19", note: "77.1% ARC-AGI-2 score; preview release" },
+    ],
+    notes: "Pro is Gemini's flagship line, having absorbed the Ultra tier after 1.0. Cadence tied to Google I/O and major DeepMind research cycles."
+  },
+  {
+    id: "gemini-flash",
+    name: "Gemini Flash",
+    lab: "Google DeepMind",
+    labColor: "#4285f4",
+    icon: "⚡",
+    tier: "frontier",
+    description: "Google DeepMind's fast, cost-efficient Gemini tier, optimized for high-throughput developer and agentic workloads.",
+    releases: [
       { version: "Gemini 1.5 Flash", date: "2024-05-14", note: "Google I/O: fast, cost-efficient 1.5 variant for developers" },
       { version: "Gemini 2.0 Flash", date: "2024-12-11", note: "Native multimodal output, agentic Deep Research capability" },
-      { version: "Gemini 2.0 Pro + Flash-Lite", date: "2025-02-05", note: "2.0 general availability with Pro and Flash-Lite variants" },
-      { version: "Gemini 2.5 Pro", date: "2025-03-25", note: "First Gemini thinking model; chain-of-thought reasoning" },
-      { version: "Gemini 2.5 Flash", date: "2025-06-01", note: "Efficient 2.5 thinking variant; Flash-Lite also released" },
-      { version: "Gemini 3 Pro", date: "2025-11-18", note: "Gemini 3 launch; immediate availability across all platforms" },
+      { version: "Gemini 2.5 Flash", date: "2025-06-01", note: "Efficient 2.5 thinking variant" },
       { version: "Gemini 3 Flash", date: "2025-12-01", note: "New default model, replacing Gemini 2.5 Flash" },
-      { version: "Gemini 3.1 Pro", date: "2026-02-19", note: "77.1% ARC-AGI-2 score; preview release" },
-      { version: "Gemini 3.6 Flash + 3.5 Flash-Lite", date: "2026-07-21", note: "3.6 Flash: workhorse update, 17% fewer output tokens than 3.5 Flash; 3.5 Flash-Lite: new low-latency/high-throughput leader at 350 tok/s. Gemini 3.5 Flash Cyber (security vuln detection/patching) also announced but limited to governments and trusted partners in a pilot, not broadly available" },
+      { version: "Gemini 3.6 Flash", date: "2026-07-21", note: "Workhorse update, 17% fewer output tokens than 3.5 Flash. Gemini 3.5 Flash Cyber (security vuln detection/patching) also announced same day but limited to governments and trusted partners in a pilot, not broadly available" },
     ],
-    notes: "Gemini has accelerated to near-quarterly major releases. Cadence tied to Google I/O and DeepMind research cycles."
+    notes: "Flash is Gemini's highest-cadence line, typically launching at or shortly after each Pro release."
+  },
+  {
+    id: "gemini-flash-lite",
+    name: "Gemini Flash-Lite",
+    lab: "Google DeepMind",
+    labColor: "#4285f4",
+    icon: "✧",
+    tier: "frontier",
+    description: "Google DeepMind's smallest, cheapest Gemini tier, optimized for low-latency, high-volume tasks.",
+    releases: [
+      { version: "Gemini 2.0 Flash-Lite", date: "2025-02-05", note: "2.0 general availability; Flash-Lite variant" },
+      { version: "Gemini 2.5 Flash-Lite", date: "2025-06-01", note: "Released alongside Gemini 2.5 Flash" },
+      { version: "Gemini 3.5 Flash-Lite", date: "2026-07-21", note: "New low-latency/high-throughput leader at 350 output tokens/s" },
+    ],
+    notes: "Flash-Lite ships alongside Flash releases, one rung down in capability and cost."
   },
   {
     id: "gemma",
