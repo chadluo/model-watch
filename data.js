@@ -82,9 +82,10 @@ const MODELS = [
       { version: "Claude Opus 4.5", date: "2025-11-24", note: "Infinite Chats feature addressing context limits; coding improvements" },
       { version: "Claude Opus 4.6", date: "2026-02-05", note: "Agent teams support and PowerPoint integration" },
       { version: "Claude Opus 4.7", date: "2026-04-16", note: "Users noted increased refusals vs. 4.5" },
-      { version: "Claude Opus 4.8", date: "2026-05-28", note: "Latest Opus release" },
+      { version: "Claude Opus 4.8", date: "2026-05-28", note: "Final 4.x Opus release" },
+      { version: "Claude Opus 5", date: "2026-07-24", note: "Near-Fable quality at half the price; default model on Claude Max, plus a 2.5x-speed Fast mode" },
     ],
-    notes: "Opus has settled into a roughly bimonthly cadence through the 4.x generation."
+    notes: "Opus held a roughly bimonthly cadence through the 4.x generation, with Opus 5 continuing that pace as the everyday flagship below Fable."
   },
   {
     id: "claude-fable",
