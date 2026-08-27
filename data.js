@@ -135,6 +135,7 @@ const MODELS = [
       { version: "Gemini 3 Flash", date: "2025-12-17", note: "New default model, replacing Gemini 2.5 Flash" },
       { version: "Gemini 3.5 Flash", date: "2026-05-19", note: "First Gemini 3.5 model; beat 3.1 Pro on coding/agentic benchmarks at 4x the output speed" },
       { version: "Gemini 3.6 Flash", date: "2026-07-21", note: "Workhorse update, 17% fewer output tokens than 3.5 Flash. Gemini 3.5 Flash Cyber (security vuln detection/patching) also announced same day but limited to governments and trusted partners in a pilot, not broadly available" },
+      { version: "Gemini 3.7 Flash", date: "2026-08-13", note: "Most capable Flash-tier model yet, tuned for coding/agentic workflows (65.3% on DeepSWE v1.1 vs. 49.0% for 3.6 Flash)" },
     ],
     notes: "Flash is Gemini's highest-cadence line, typically launching at or shortly after each Pro release."
   },
@@ -195,17 +196,19 @@ const MODELS = [
       { version: "Llama 3.3", date: "2024-12-07", note: "70B with improved instruction tuning" },
       { version: "Llama 4 Scout + Maverick", date: "2025-04-05", note: "MoE architecture; Scout 10M context, Maverick 1M context" },
       { version: "Muse Spark", date: "2026-04-01", note: "Meta Superintelligence Labs rebranding; announced as Llama successor" },
+      { version: "Muse Spark 1.2", date: "2026-08-05", note: "Coding-focused update with higher first-attempt accuracy; launched alongside Muse Code, Meta's first terminal-based coding agent" },
+      { version: "Muse Glimmer", date: "2026-08-10", note: "Open-weight 30B model distilled from Muse Spark for on-device agentic use; runs on a single consumer GPU; Apache 2.0" },
     ],
     notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name."
   },
   {
     id: "grok",
     name: "Grok",
-    lab: "xAI",
+    lab: "SpaceXAI",
     labColor: "#a78bfa",
     icon: "✕",
     tier: "frontier",
-    description: "xAI's Grok series, trained on real-time X data; rapidly expanded from Grok-1 to the 4.x generation.",
+    description: "Grok series, trained on real-time X data; rapidly expanded from Grok-1 to the 4.x generation. Originally developed by xAI, now shipped under SpaceXAI following the February 2026 xAI–SpaceX merger and July 2026 rebrand.",
     releases: [
       { version: "Grok-1", date: "2023-11-03", note: "Early access on X Premium+; trained in 2 months; open-sourced Mar 2024" },
       { version: "Grok-1.5", date: "2024-05-15", note: "128k context; improved reasoning (announced Mar 29)" },
@@ -216,8 +219,9 @@ const MODELS = [
       { version: "Grok 4.1", date: "2025-11-17", note: "Improved reasoning, multimodal, reduced hallucinations" },
       { version: "Grok 4.20 Beta", date: "2026-02-01", note: "Speed focus; agentic tool calling; low hallucination rate" },
       { version: "Grok 4.3 Beta", date: "2026-04-17", note: "Improved architecture; December 2025 knowledge cutoff" },
+      { version: "Grok 4.6", date: "2026-08-12", note: "First release under SpaceXAI branding; 500K context, configurable reasoning effort, multimodal input, tuned for long-running agents" },
     ],
-    notes: "xAI has accelerated to monthly releases in the 4.x era, with Fast and specialized coding variants alongside flagship models."
+    notes: "xAI (now SpaceXAI) has accelerated to monthly releases in the 4.x era, with Fast and specialized coding variants alongside flagship models."
   },
   {
     id: "deepseek",
@@ -239,6 +243,8 @@ const MODELS = [
       { version: "DeepSeek-V3.1", date: "2025-08-21", note: "Hybrid thinking/non-thinking mode; 40% improvement on key benchmarks" },
       { version: "DeepSeek-V3.2", date: "2025-12-01", note: "Sparse Attention mechanism; standard and Speciale reasoning variants" },
       { version: "DeepSeek-V4", date: "2026-04-24", note: "V4-Pro (1.6T params, 49B active) and V4-Flash (284B, 13B active); 1M context" },
+      { version: "DeepSeek-V4-Pro-0813", date: "2026-08-13", note: "General-availability release of V4-Pro after April preview; up to 1M context/384K output, thinking and non-thinking modes" },
+      { version: "DeepSeek-V4-Flash-Vision-Exp", date: "2026-08-21", note: "Experimental multimodal (vision) variant of V4-Flash; matches text/agent/reasoning benchmarks while adding image understanding" },
     ],
     notes: "DeepSeek maintains an extremely fast iteration cycle. V4 introduced trillion-parameter scale with MoE efficiency."
   },
@@ -260,6 +266,8 @@ const MODELS = [
       { version: "Qwen3-Max", date: "2025-09-01", note: "Proprietary 1T+ parameter flagship" },
       { version: "Qwen3.5 + Qwen3.5-Plus", date: "2026-02-01", note: "Qwen3.5 open; Plus is proprietary" },
       { version: "Qwen3.6-35B-A3B", date: "2026-04-01", note: "MoE model; 35B total / 3B active; Apache 2.0" },
+      { version: "Qwen3.8-Max", date: "2026-08-03", note: "Alibaba's largest flagship yet; 2.4T-param MoE (95B active), 1M context, natively multimodal" },
+      { version: "Qwen3.8-Flash-Next", date: "2026-08-26", note: "Open-weight 125B MoE (~6B active); early preview of upcoming Qwen4 architecture" },
     ],
     notes: "Qwen has become one of the most widely deployed open-weight families. Qwen3.x continues rapid iteration into 2026."
   },
@@ -283,6 +291,8 @@ const MODELS = [
       { version: "GLM-5", date: "2026-02-01", note: "Flagship generation leap" },
       { version: "GLM-5.1", date: "2026-04-01", note: "Open-source release; company raised API prices 10%" },
       { version: "GLM-5.2", date: "2026-06-01", note: "1M token context window" },
+      { version: "GLM-5.3", date: "2026-08-14", note: "Post-trained on the same base as 5.2 with extra RL on long-horizon coding/cyber tasks; lifted Terminal-Bench 3.0 from 4.6% to 28.3%" },
+      { version: "GLM-5.3-Flash", date: "2026-08-26", note: "First natively multimodal model in the GLM-5 line; 320B-total/18B-active MoE, 1M context, MIT-licensed open weights" },
     ],
     notes: "Zhipu has accelerated release cadence significantly through 2025–2026, now at rough monthly intervals."
   },
