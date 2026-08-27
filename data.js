@@ -25,7 +25,8 @@ const MODELS = [
       { version: "GPT-5.3 Instant", date: "2026-03-01", note: "Fast-answer variant of 5.3" },
       { version: "GPT-5.4", date: "2026-03-01", note: "Enterprise-focused; improved autonomous computer operation" },
       { version: "GPT-5.5", date: "2026-04-23", note: "Complex professional multi-step work; includes Cyber variant" },
-      { version: "GPT-5.6 Sol / Terra / Luna", date: "2026-06-26", note: "Three-tier family: Sol (flagship reasoning), Terra (balanced), Luna (fast/low-cost); limited preview to government-approved partners" },
+      { version: "GPT-5.6 Sol / Terra / Luna", date: "2026-06-26", note: "Three-tier family: Sol (flagship reasoning), Terra (balanced), Luna (fast/low-cost); initially limited preview to government-approved partners, reached full public availability 2026-07-09" },
+      { version: "GPT-5.6-Cyber", date: "2026-08-10", note: "Gated cybersecurity variant of Sol with relaxed safeguards for vetted defenders; part of expanded Daybreak Red/Blue access program" },
     ],
     notes: "OpenAI has accelerated to near-monthly releases across both GPT and o-series lines since mid-2025."
   },
@@ -96,7 +97,7 @@ const MODELS = [
     tier: "frontier",
     description: "Anthropic's newest, most capable widely released model line, succeeding the Opus tier for the most demanding reasoning and long-horizon agentic work.",
     releases: [
-      { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 for safety review, restored July 2026 with promotional access" },
+      { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 under US export-control directive, restored globally July 1, 2026; biology-related safety classifiers retuned Aug 7, cutting fallbacks ~85%" },
     ],
     notes: "Claude Fable 5 is a single-release line so far."
   },
