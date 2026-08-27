@@ -343,6 +343,7 @@ const MODELS = [
     releases: [
       { version: "Nex N1 (DeepSeek V3.1)", date: "2025-12-08", note: "Post-trained on DeepSeek V3.1; agent autonomy, tool use, coding and HTML generation; 8K context" },
       { version: "Nex N2-Pro", date: "2026-06-08", note: "MoE built on Qwen3.5; 17B active / 397B total; deep research and agentic workflows; 262K context" },
+      { version: "Nex-N2-Mini", date: "2026-06-24", note: "35B open-source sibling to N2-Pro, built on Qwen3.5-35B-A3B-Base; coding/tool-use focus; 262K context" },
     ],
     notes: "Nex AGI specializes in post-training open-weight models for agentic use cases."
   },
@@ -382,8 +383,14 @@ const MODELS = [
       { version: "Magistral Small + Medium", date: "2025-06-10", note: "Reasoning models with chain-of-thought; Small is Apache 2.0, Medium is proprietary" },
       { version: "Mistral Large 3 + Ministral 3", date: "2025-12-02", note: "Large 3: 675B sparse MoE (41B active), Apache 2.0; Ministral 3: 3B/8B/14B dense with vision" },
       { version: "Devstral 2", date: "2025-12-10", note: "123B code-generation specialist; modified MIT license" },
+      { version: "Voxtral", date: "2026-02-04", note: "Open audio model with transcription and speaker diarization" },
+      { version: "Mistral Small 4", date: "2026-03-16", note: "Unified open-source MoE merging Magistral (reasoning), Pixtral (vision), and Devstral (coding) into one Small-tier model" },
+      { version: "Voxtral TTS", date: "2026-03-23", note: "Open-weight text-to-speech companion to Voxtral" },
+      { version: "Mistral Medium 3.5", date: "2026-04-30", note: "Dense 128B flagship folding Devstral 2 and Magistral into one model; 256K context, 77.6% SWE-Bench Verified" },
+      { version: "Leanstral 1.5", date: "2026-06-30", note: "Apache 2.0 Lean 4 formal-proof/theorem-proving model; 119B MoE (6.5B active); solved 587/672 PutnamBench problems" },
+      { version: "Robostral Navigate", date: "2026-07-08", note: "Mistral's first robotics model; 8B vision-language model for single-camera robot navigation" },
     ],
-    notes: "Mistral alternates between open-weight and proprietary releases. Magistral marks their entry into the reasoning model tier."
+    notes: "Mistral alternates between open-weight and proprietary releases. Magistral marks their entry into the reasoning model tier; Voxtral, Leanstral, and Robostral extend into audio, formal proof, and robotics."
   },
   {
     id: "kimi",
