@@ -27,6 +27,7 @@ const MODELS = [
       { version: "GPT-5.5", date: "2026-04-23", note: "Complex professional multi-step work; includes Cyber variant" },
       { version: "GPT-5.6 Sol / Terra / Luna", date: "2026-06-26", note: "Three-tier family: Sol (flagship reasoning), Terra (balanced), Luna (fast/low-cost); initially limited preview to government-approved partners, reached full public availability 2026-07-09" },
       { version: "GPT-5.6-Cyber", date: "2026-08-10", note: "Gated cybersecurity variant of Sol with relaxed safeguards for vetted defenders; part of expanded Daybreak Red/Blue access program" },
+      { version: "GPT-6 Astra", date: "2026-09-03", note: "First OpenAI model rated 'Critical' cyber risk (up from 'High'); 1M token context" },
     ],
     notes: "OpenAI has accelerated to near-monthly releases across both GPT and o-series lines since mid-2025."
   },
@@ -98,6 +99,7 @@ const MODELS = [
     description: "Anthropic's newest, most capable widely released model line, succeeding the Opus tier for the most demanding reasoning and long-horizon agentic work.",
     releases: [
       { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 under US export-control directive, restored globally July 1, 2026; biology-related safety classifiers retuned Aug 7, cutting fallbacks ~85%" },
+      { version: "Claude Fable 5.1", date: "2026-09-01", note: "Released alongside Claude Mythos 5.1; ~25% cheaper cache-read pricing; retuned cybersecurity safeguards cut false positives 60%, permitting vulnerability discovery" },
     ],
     notes: "Claude Fable 5 is a single-release line so far."
   },
@@ -136,6 +138,7 @@ const MODELS = [
       { version: "Gemini 3.5 Flash", date: "2026-05-19", note: "First Gemini 3.5 model; beat 3.1 Pro on coding/agentic benchmarks at 4x the output speed" },
       { version: "Gemini 3.6 Flash", date: "2026-07-21", note: "Workhorse update, 17% fewer output tokens than 3.5 Flash. Gemini 3.5 Flash Cyber (security vuln detection/patching) also announced same day but limited to governments and trusted partners in a pilot, not broadly available" },
       { version: "Gemini 3.7 Flash", date: "2026-08-13", note: "Most capable Flash-tier model yet, tuned for coding/agentic workflows (65.3% on DeepSWE v1.1 vs. 49.0% for 3.6 Flash)" },
+      { version: "Gemini 3.8 Flash", date: "2026-09-02", note: "Third Flash release in six weeks; 73.7% on DeepSWE v1.1; 1M context, 64K output" },
     ],
     notes: "Flash is Gemini's highest-cadence line, typically launching at or shortly after each Pro release."
   },
@@ -389,6 +392,7 @@ const MODELS = [
       { version: "Mistral Medium 3.5", date: "2026-04-30", note: "Dense 128B flagship folding Devstral 2 and Magistral into one model; 256K context, 77.6% SWE-Bench Verified" },
       { version: "Leanstral 1.5", date: "2026-06-30", note: "Apache 2.0 Lean 4 formal-proof/theorem-proving model; 119B MoE (6.5B active); solved 587/672 PutnamBench problems" },
       { version: "Robostral Navigate", date: "2026-07-08", note: "Mistral's first robotics model; 8B vision-language model for single-camera robot navigation" },
+      { version: "Mistral OCR 4.1", date: "2026-08-31", note: "Document-extraction model reaches GA; adds block-level confidence scores; mistral-ocr-latest now points to it" },
     ],
     notes: "Mistral alternates between open-weight and proprietary releases. Magistral marks their entry into the reasoning model tier; Voxtral, Leanstral, and Robostral extend into audio, formal proof, and robotics."
   },
