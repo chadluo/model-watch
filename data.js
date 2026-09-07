@@ -101,7 +101,7 @@ const MODELS = [
       { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 under US export-control directive, restored globally July 1, 2026; biology-related safety classifiers retuned Aug 7, cutting fallbacks ~85%" },
       { version: "Claude Fable 5.1", date: "2026-09-01", note: "Released alongside Claude Mythos 5.1; ~25% cheaper cache-read pricing; retuned cybersecurity safeguards cut false positives 60%, permitting vulnerability discovery" },
     ],
-    notes: "Claude Fable 5 is a single-release line so far."
+    notes: "Two releases so far: 84 days from Fable 5 to Fable 5.1 — too short a history to call a firm cadence."
   },
   {
     id: "gemini-pro",
