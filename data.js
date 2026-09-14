@@ -248,6 +248,7 @@ const MODELS = [
       { version: "DeepSeek-V4", date: "2026-04-24", note: "V4-Pro (1.6T params, 49B active) and V4-Flash (284B, 13B active); 1M context" },
       { version: "DeepSeek-V4-Pro-0813", date: "2026-08-13", note: "General-availability release of V4-Pro after April preview; up to 1M context/384K output, thinking and non-thinking modes" },
       { version: "DeepSeek-V4-Flash-Vision-Exp", date: "2026-08-21", note: "Experimental multimodal (vision) variant of V4-Flash; matches text/agent/reasoning benchmarks while adding image understanding" },
+      { version: "DeepSeek-V4.1-Flash", date: "2026-09-10", note: "552B MoE with new Causal Encoder-Decoder architecture (8B active input/16B active output); native multimodal vision, 1M context, MIT license; deepseek-v4-pro traffic now routed here at ~4x lower price" },
     ],
     notes: "DeepSeek maintains an extremely fast iteration cycle. V4 introduced trillion-parameter scale with MoE efficiency."
   },
