@@ -201,6 +201,7 @@ const MODELS = [
       { version: "Muse Spark", date: "2026-04-01", note: "Meta Superintelligence Labs rebranding; announced as Llama successor" },
       { version: "Muse Spark 1.2", date: "2026-08-05", note: "Coding-focused update with higher first-attempt accuracy; launched alongside Muse Code, Meta's first terminal-based coding agent" },
       { version: "Muse Glimmer", date: "2026-08-10", note: "Open-weight 30B model distilled from Muse Spark for on-device agentic use; runs on a single consumer GPU; Apache 2.0" },
+      { version: "Muse Spark 1.3", date: "2026-09-02", note: "Agentic coding update; ~20% fewer tool calls and ~25% fewer tokens than 1.2; 1M context" },
     ],
     notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name."
   },
@@ -272,6 +273,7 @@ const MODELS = [
       { version: "Qwen3.6-35B-A3B", date: "2026-04-01", note: "MoE model; 35B total / 3B active; Apache 2.0" },
       { version: "Qwen3.8-Max", date: "2026-08-03", note: "Alibaba's largest flagship yet; 2.4T-param MoE (95B active), 1M context, natively multimodal" },
       { version: "Qwen3.8-Flash-Next", date: "2026-08-26", note: "Open-weight 125B MoE (~6B active); early preview of upcoming Qwen4 architecture" },
+      { version: "Qwen3.8-Max-0902", date: "2026-09-02", note: "Post-trained snapshot of Qwen3.8-Max for coding and multi-agent Cowork tasks; CodeArena score +22 points" },
     ],
     notes: "Qwen has become one of the most widely deployed open-weight families. Qwen3.x continues rapid iteration into 2026."
   },
@@ -348,6 +350,7 @@ const MODELS = [
       { version: "Nex N1 (DeepSeek V3.1)", date: "2025-12-08", note: "Post-trained on DeepSeek V3.1; agent autonomy, tool use, coding and HTML generation; 8K context" },
       { version: "Nex N2-Pro", date: "2026-06-08", note: "MoE built on Qwen3.5; 17B active / 397B total; deep research and agentic workflows; 262K context" },
       { version: "Nex-N2-Mini", date: "2026-06-24", note: "35B open-source sibling to N2-Pro, built on Qwen3.5-35B-A3B-Base; coding/tool-use focus; 262K context" },
+      { version: "Nex-N2.5-mini", date: "2026-09-08", note: "35B MoE (~3B active); computer-use, browser, and visually-grounded agentic capabilities; 262K context; open weights" },
     ],
     notes: "Nex AGI specializes in post-training open-weight models for agentic use cases."
   },
@@ -362,8 +365,9 @@ const MODELS = [
     releases: [
       { version: "Step 3.5 Flash", date: "2026-01-29", note: "Open-source sparse MoE; 196B total / 11B active per token; 262K context" },
       { version: "Step 3.7 Flash", date: "2026-05-28", note: "Multimodal with vision encoder; selectable reasoning levels; 256K context" },
+      { version: "Step 5 Preview", date: "2026-09-20", note: "600B MoE flagship (27B active), 1M context, multimodal; open weights planned for Oct 15" },
     ],
-    notes: "StepFun focuses on efficient sparse MoE inference with a consistent 196B/11B active parameter footprint."
+    notes: "StepFun's flagship jumped from the 196B/11B Flash tier to a 600B/27B Step 5 Preview, moving beyond its earlier consistent-footprint pattern."
   },
   {
     id: "mistral",
