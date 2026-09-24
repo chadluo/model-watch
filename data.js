@@ -34,6 +34,20 @@ const MODELS = [
     notes: "OpenAI has accelerated to near-monthly releases across both GPT and o-series lines since mid-2025."
   },
   {
+    id: "gpt-oss",
+    name: "GPT-OSS",
+    lab: "OpenAI",
+    labColor: "#10a37f",
+    icon: "◫",
+    tier: "open",
+    description: "OpenAI's open-weight gpt-oss line, released under Apache 2.0 — a separate track from the proprietary GPT/o-series lineup, aimed at consumer and single-GPU self-hosting.",
+    releases: [
+      { version: "gpt-oss-120b + gpt-oss-20b", date: "2025-08-05", note: "First open-weight OpenAI release since GPT-2; MoE reasoning models (116.83B/5.13B active and 20.91B/3.61B active), 131k context, Apache 2.0" },
+      { version: "gpt-oss-safeguard-120b + -20b", date: "2025-10-29", note: "Safety-classification fine-tunes of gpt-oss; interpret a developer-supplied policy at inference time to classify messages/completions" },
+    ],
+    notes: "A single flagship pair (120b/20b) launched Aug 2025, followed by a safety-focused fine-tune two months later; sustained heavy usage since despite no further base-model updates."
+  },
+  {
     id: "claude-sonnet",
     name: "Claude Sonnet",
     lab: "Anthropic",
@@ -411,21 +425,5 @@ const MODELS = [
       { version: "Ling-3.0-flash-VL", date: "2026-09-10", note: "Native multimodal vision-language variant; adds VideoRoPE for video understanding, 262K context" },
     ],
     notes: "InclusionAI moved from a standing start (lab founded Feb 2025) to trillion-parameter open-source flagships by October 2025, then settled into roughly bimonthly Ling-2.x flagship upgrades punctuated by a burst of domain-specific Ling-3.0-flash variants (Fin, Sante, VL) in Aug–Sep 2026."
-  },
-  {
-    id: "dots",
-    name: "dots.llm (RedNote)",
-    lab: "RedNote Hi Lab",
-    labColor: "#ff2442",
-    icon: "⁘",
-    tier: "chinese",
-    description: "RedNote's (Xiaohongshu) Hi Lab open-weight MoE family, spanning text (dots.llm1), document OCR (dots.ocr), vision-language (dots.vlm1), and the newer agentic multimodal Dots 3 line.",
-    releases: [
-      { version: "dots.llm1 (base + inst)", date: "2025-06-06", note: "142B-param MoE, 14B active; open-sourced under Apache 2.0, benchmarked on par with Qwen2.5-72B" },
-      { version: "dots.ocr", date: "2025-07-30", note: "1.7B-param VLM for multilingual document layout parsing; SOTA on OmniDocBench" },
-      { version: "dots.vlm1", date: "2025-08-07", note: "First vision-language model in the family; 1.2B-param NaViT vision encoder + DeepSeek V3 LLM backbone" },
-      { version: "dots3-note Preview", date: "2026-08-14", note: "280B-param MoE, 16B active, 512K context, text/image/video/audio input; introduced TEMPO agentic RL training; entered OpenRouter top-20" },
-    ],
-    notes: "Shipped three distinct open-weight model lines (LLM, OCR, VLM) in quick succession in mid-2025 (roughly monthly), then went quiet for about a year before launching the Dots 3 family in August 2026 — cadence is irregular and spans different model types rather than sequential versions of a single model."
   },
 ];
