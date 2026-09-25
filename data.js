@@ -34,6 +34,20 @@ const MODELS = [
     notes: "OpenAI has accelerated to near-monthly releases across both GPT and o-series lines since mid-2025."
   },
   {
+    id: "openai-gpt-oss",
+    name: "OpenAI gpt-oss",
+    lab: "OpenAI",
+    labColor: "#10a37f",
+    icon: "⬦",
+    tier: "open",
+    description: "OpenAI's open-weight gpt-oss family — Apache 2.0 reasoning models bringing chain-of-thought and tool use to self-hosted deployment; OpenAI's first open weights since GPT-2.",
+    releases: [
+      { version: "gpt-oss-120b + gpt-oss-20b", date: "2025-08-05", note: "First open-weight release since GPT-2; MoE architecture with adjustable low/medium/high reasoning effort; Apache 2.0" },
+      { version: "gpt-oss-safeguard-120b + gpt-oss-safeguard-20b", date: "2025-10-29", note: "Safety-classification variants fine-tuned from gpt-oss; developers supply their own policy at inference time" },
+    ],
+    notes: "A separate open-weight line from OpenAI's proprietary GPT tier; entered OpenRouter's top-20 by usage despite an infrequent release cadence."
+  },
+  {
     id: "claude-sonnet",
     name: "Claude Sonnet",
     lab: "Anthropic",
@@ -76,20 +90,6 @@ const MODELS = [
       { version: "Claude Opus 5.5", date: "2026-09-22", note: "Matches Fable 5.1 performance on most tasks at 40% lower cost; best-to-date automated behavioral-audit safety scores; Terminal-Bench 4.0 66.4% (up from 52.3%)" },
     ],
     notes: "Opus held a roughly bimonthly cadence through the 4.x generation, with Opus 5 continuing that pace as the everyday flagship below Fable."
-  },
-  {
-    id: "claude-fable",
-    name: "Claude Fable",
-    lab: "Anthropic",
-    labColor: "#c96442",
-    icon: "❋",
-    tier: "frontier",
-    description: "Anthropic's newest, most capable widely released model line, succeeding the Opus tier for the most demanding reasoning and long-horizon agentic work.",
-    releases: [
-      { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 under US export-control directive, restored globally July 1, 2026; biology-related safety classifiers retuned Aug 7, cutting fallbacks ~85%" },
-      { version: "Claude Fable 5.1", date: "2026-09-01", note: "Released alongside Claude Mythos 5.1; ~25% cheaper cache-read pricing; retuned cybersecurity safeguards cut false positives 60%, permitting vulnerability discovery" },
-    ],
-    notes: "Two releases so far: 84 days from Fable 5 to Fable 5.1 — too short a history to call a firm cadence."
   },
   {
     id: "gemini-flash",
