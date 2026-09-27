@@ -425,4 +425,71 @@ const MODELS = [
     ],
     notes: "Single release so far — no cadence history yet. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
   },
+  {
+    id: "xai",
+    name: "Grok",
+    lab: "xAI",
+    labColor: "#ec4899",
+    icon: "✕",
+    tier: "frontier",
+    description: "xAI's Grok family — Elon Musk's AI lab, integrated into SpaceX and rebranded SpaceXAI in mid-2026 (Grok kept its name). Frontier chat, coding, and agentic models spanning Grok-1 through the fast-iterating 4.x line.",
+    releases: [
+      { version: "Grok-1", date: "2023-11-03", note: "First Grok chatbot released to X Premium+ subscribers" },
+      { version: "Grok-1 (open weights)", date: "2024-03-11", note: "314B MoE base checkpoint open-sourced under Apache 2.0" },
+      { version: "Grok-2", date: "2024-08-13", note: "Grok-2 and Grok-2 mini launched, plus Grok-2 Image text-to-image model" },
+      { version: "Grok-3", date: "2025-02-17", note: "First dedicated reasoning model; trained on 200k+ GPU Colossus supercluster; DeepSearch launched alongside" },
+      { version: "Grok-4", date: "2025-07-09", note: "Launched via livestream; large context window, built-in coding, multimodal" },
+      { version: "Grok 4.5", date: "2026-07-08", note: "1.5T-param model trained with Cursor coding data; wider grok.com/X rollout followed two weeks later" },
+      { version: "Grok 4.6", date: "2026-08-12", note: "1.5T-param update per xAI's official announcement" },
+      { version: "Grok 4.7", date: "2026-09-21", note: "2.1T-param frontier model for coding, agentic, and knowledge work" },
+    ],
+    notes: "xAI accelerated from 6-12 month gaps (Grok-1 through Grok-4) to a roughly 6-10 week cadence through 2026. The company merged into SpaceX and rebranded SpaceXAI in July 2026."
+  },
+  {
+    id: "dots",
+    name: "Dots",
+    lab: "Dots Studio (RedNote)",
+    labColor: "#ff2442",
+    icon: "⣿",
+    tier: "chinese",
+    description: "Dots Studio is Xiaohongshu (RedNote)'s in-house AI lab, publishing under the 'rednote-hilab' and 'Dots Studio' names. The line spans the dots.llm1 text MoE, dots.ocr document parsing, dots.vlm1 vision, dots.tts speech, and the newer dots3 multimodal agentic models.",
+    releases: [
+      { version: "dots.llm1", date: "2025-06-06", note: "First public dots model; 142B-total/14B-active MoE trained on 11.2T non-synthetic tokens; open-sourced by rednote-hilab" },
+      { version: "dots.ocr", date: "2025-07-30", note: "Multilingual document layout parsing vision-language model" },
+      { version: "dots.vlm1", date: "2025-08-07", note: "First general vision-language model in the family; 1.2B vision encoder + DeepSeek-V3 LLM backbone" },
+      { version: "dots.ocr-1.5", date: "2026-02-15", note: "3B-param OCR update; SOTA multilingual document parsing, converts charts/diagrams to SVG" },
+      { version: "dots.tts", date: "2026-06-05", note: "2B-param fully continuous autoregressive TTS with 54ms streaming voice cloning; Apache 2.0" },
+      { version: "dots3-note (preview)", date: "2026-08-14", note: "280B-total/16B-active multimodal (text/image/video/audio) MoE; 512K context; introduces TEMPO RL method for long-horizon agents; open-weight" },
+    ],
+    notes: "Roughly bimonthly cadence across sub-families (LLM, OCR, VLM) through 2025, followed by a quieter stretch before the TTS and dots3 lines launched in mid/late 2026."
+  },
+  {
+    id: "nex",
+    name: "Nex-N",
+    lab: "Nex AGI",
+    labColor: "#84cc16",
+    icon: "⟁",
+    tier: "chinese",
+    description: "Nex-AGI is an open-source agentic AI initiative backed by the Shanghai Innovation Institute and several Shanghai-area AI startups. Rather than pretraining from scratch, its Nex-N series post-trains existing open base models to specialize in autonomous coding, tool-use, and computer-use agents.",
+    releases: [
+      { version: "Nex-N1 (DeepSeek-V3.1-Nex-N1)", date: "2025-11-19", note: "First Nex-N release; agent-autonomy/tool-use post-train of DeepSeek-V3.1" },
+      { version: "Nex-N2-Pro + Nex-N2-Mini", date: "2026-06-08", note: "Pro: 397B MoE (17B active) on Qwen3.5-397B-A17B; Mini: 35B MoE (3B active) on Qwen3.5-35B-A3B; Apache 2.0" },
+      { version: "Nex-N2.5-Mini + Nex-N2.5-Pro + Nex-N2.5-Max", date: "2026-09-08", note: "Third-gen agentic/computer-use family: Mini (35B MoE), Pro (multimodal, 262K context, browser/desktop agent focus), Max (1.6T MoE, 49B active, 1.05M context); Apache 2.0" },
+    ],
+    notes: "Nex-N has shipped roughly every 6-7 months since its November 2025 debut, each generation post-trained on a newer open base model (DeepSeek-V3.1, then Qwen3.5)."
+  },
+  {
+    id: "thinkingmachines",
+    name: "Inkling",
+    lab: "Thinking Machines Lab",
+    labColor: "#d4a574",
+    icon: "◐",
+    tier: "open",
+    description: "Thinking Machines Lab is Mira Murati's AI startup, founded in 2025 by ex-OpenAI leadership. After launching the Tinker fine-tuning API in late 2025, it released its debut open-weight model family, Inkling, in mid-2026.",
+    releases: [
+      { version: "Inkling", date: "2026-07-15", note: "Debut open-weight model; 975B-total/41B-active MoE, natively multimodal (text/image/audio/video), trained on 45T tokens, up to 1M context; Apache 2.0" },
+      { version: "Inkling-Small", date: "2026-07-30", note: "Companion model; 276B-total/12B-active MoE; matches or beats full Inkling on several benchmarks at lower serving cost" },
+    ],
+    notes: "Only two model releases so far, 15 days apart in July 2026 — too short a history for a real cadence yet."
+  },
 ];
