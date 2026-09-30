@@ -1,13 +1,27 @@
 const MODELS = [
   {
-    id: "openai",
-    name: "OpenAI",
+    id: "openai-astra",
+    name: "OpenAI Astra",
+    lab: "OpenAI",
+    labColor: "#10a37f",
+    icon: "✦",
+    tier: "frontier",
+    description: "OpenAI's top-end GPT-6 Astra tier, positioned above Sol for the most demanding reasoning and agentic work.",
+    releases: [
+      { version: "GPT-6 Astra", date: "2026-09-03", note: "First OpenAI model rated 'Critical' cyber risk (up from 'High'); 1M token context" },
+    ],
+    notes: "Single release so far — no cadence history yet. GPT-6.1 Sol (Sept 29) nearly matches Astra at one-fifth the price."
+  },
+  {
+    id: "openai-sol",
+    name: "OpenAI Sol",
     lab: "OpenAI",
     labColor: "#10a37f",
     icon: "⬡",
     tier: "frontier",
-    description: "OpenAI's ChatGPT models, spanning GPT-3.5 through GPT-5.x, plus the o-series chain-of-thought reasoning models.",
+    description: "OpenAI's mainline GPT line, from GPT-3.5 and the o-series through GPT-5.x, now the Sol tier: the balanced coding/reasoning workhorse.",
     releases: [
+
       { version: "GPT-3.5", date: "2022-11-30", note: "First ChatGPT model; first widely public conversational LLM" },
       { version: "GPT-4", date: "2023-03-14", note: "Major multimodal leap over GPT-3.5" },
       { version: "GPT-4 Turbo", date: "2023-11-06", note: "128k context, lower cost" },
@@ -25,13 +39,39 @@ const MODELS = [
       { version: "GPT-5.3 Instant", date: "2026-03-01", note: "Fast-answer variant of 5.3" },
       { version: "GPT-5.4", date: "2026-03-01", note: "Enterprise-focused; improved autonomous computer operation" },
       { version: "GPT-5.5", date: "2026-04-23", note: "Complex professional multi-step work; includes Cyber variant" },
-      { version: "GPT-5.6 Sol / Terra / Luna", date: "2026-06-26", note: "Three-tier family: Sol (flagship reasoning), Terra (balanced), Luna (fast/low-cost); initially limited preview to government-approved partners, reached full public availability 2026-07-09" },
+      { version: "GPT-5.6 Sol", date: "2026-06-26", note: "Flagship reasoning tier of the three-tier 5.6 family; initially limited preview to government-approved partners, reached full public availability 2026-07-09" },
       { version: "GPT-5.6-Cyber", date: "2026-08-10", note: "Gated cybersecurity variant of Sol with relaxed safeguards for vetted defenders; part of expanded Daybreak Red/Blue access program" },
-      { version: "GPT-6 Astra", date: "2026-09-03", note: "First OpenAI model rated 'Critical' cyber risk (up from 'High'); 1M token context" },
       { version: "GPT-6 Sol", date: "2026-09-22", note: "Balanced coding/reasoning tier; ~half the factual-mistake rate of GPT-5.6 Sol at half the price ($2/$10 per MTok)" },
+      { version: "GPT-6.1 Sol", date: "2026-09-29", note: "Near-Astra performance on agentic coding, computer use and professional work at one-fifth of Astra's price ($2/$10 per MTok); Ultrafast tier (up to 8x faster in Codex) to follow" },
+    ],
+    notes: "OpenAI accelerated to near-monthly releases across both GPT and o-series lines since mid-2025. Sol inherits the full GPT history; the Astra/Sol/Terra/Luna tier split began with GPT-5.6."
+  },
+  {
+    id: "openai-terra",
+    name: "OpenAI Terra",
+    lab: "OpenAI",
+    labColor: "#10a37f",
+    icon: "◍",
+    tier: "frontier",
+    description: "OpenAI's balanced middle tier between Sol and Luna.",
+    releases: [
+      { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+    ],
+    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+  },
+  {
+    id: "openai-luna",
+    name: "OpenAI Luna",
+    lab: "OpenAI",
+    labColor: "#10a37f",
+    icon: "☽",
+    tier: "frontier",
+    description: "OpenAI's fast, low-cost tier for high-volume summarization, extraction and quick-answer work.",
+    releases: [
+      { version: "GPT-5.6 Luna", date: "2026-06-26", note: "Fast/low-cost tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
       { version: "GPT-6 Luna", date: "2026-09-22", note: "Lightweight high-volume tier for summarization/extraction; $0.10/$0.50 per MTok, half the price of GPT-5.6 Luna" },
     ],
-    notes: "OpenAI has accelerated to near-monthly releases across both GPT and o-series lines since mid-2025."
+    notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
   },
   {
     id: "claude-sonnet",
