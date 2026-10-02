@@ -133,6 +133,19 @@ const MODELS = [
     notes: "Two releases so far: 84 days from Fable 5 to Fable 5.1 — too short a history to call a firm cadence."
   },
   {
+    id: "gemini-argon",
+    name: "Gemini Argon",
+    lab: "Google DeepMind",
+    labColor: "#4285f4",
+    icon: "◉",
+    tier: "frontier",
+    description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
+    releases: [
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+    ],
+    notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
+  },
+  {
     id: "gemini-flash",
     name: "Gemini Flash",
     lab: "Google DeepMind",
