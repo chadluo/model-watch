@@ -248,6 +248,7 @@ const MODELS = [
       { version: "DeepSeek-V3.1", date: "2025-08-21", note: "Hybrid thinking/non-thinking mode; 40% improvement on key benchmarks" },
       { version: "DeepSeek-V3.2", date: "2025-12-01", note: "Sparse Attention mechanism; standard and Speciale reasoning variants" },
       { version: "DeepSeek-V4", date: "2026-04-24", note: "V4-Pro (1.6T params, 49B active) and V4-Flash (284B, 13B active); 1M context" },
+      { version: "DeepSeek-V4-Flash-0731", date: "2026-07-31", note: "GA release of V4-Flash (re-post-train of the April preview); same 284B/13B-active MoE architecture, stronger agentic/coding results, native Responses API and Codex support" },
       { version: "DeepSeek-V4-Pro-0813", date: "2026-08-13", note: "General-availability release of V4-Pro after April preview; up to 1M context/384K output, thinking and non-thinking modes" },
       { version: "DeepSeek-V4-Flash-Vision-Exp", date: "2026-08-21", note: "Experimental multimodal (vision) variant of V4-Flash; matches text/agent/reasoning benchmarks while adding image understanding" },
       { version: "DeepSeek-V4.1-Flash", date: "2026-09-10", note: "552B MoE with new Causal Encoder-Decoder architecture (8B active input/16B active output); native multimodal vision, 1M context, MIT license; from 2026-09-14 04:00 UTC, deepseek-v4-pro requests route here and use V4.1-Flash rates" },
@@ -466,8 +467,9 @@ const MODELS = [
       { version: "Ling-3.0-flash-Fin", date: "2026-08-27", note: "Finance-tuned variant of Ling-3.0-flash; weights open-sourced under MIT with FinFIRST benchmark" },
       { version: "Ling-3.0-flash-Sante", date: "2026-09-04", note: "Health/medicine-tuned variant; targets medical reasoning and evidence-based retrieval" },
       { version: "Ling-3.0-flash-VL", date: "2026-09-10", note: "Native multimodal vision-language variant; adds VideoRoPE for video understanding, 262K context" },
+      { version: "Ling-3.1-flash", date: "2026-09-30", note: "560B total/~25B active MoE; targets agent, search, office and specialist workloads; up to 1M-token context (capped at 256K during a two-week free trial), open-source release planned after the trial" },
     ],
-    notes: "InclusionAI moved from a standing start (lab founded Feb 2025) to trillion-parameter open-source flagships by October 2025, then settled into roughly bimonthly Ling-2.x flagship upgrades punctuated by a burst of domain-specific Ling-3.0-flash variants (Fin, Sante, VL) in Aug–Sep 2026."
+    notes: "InclusionAI moved from a standing start (lab founded Feb 2025) to trillion-parameter open-source flagships by October 2025, then settled into roughly bimonthly Ling-2.x flagship upgrades punctuated by a burst of domain-specific Ling-3.0-flash variants (Fin, Sante, VL) in Aug–Sep 2026, followed immediately by the next-generation Ling-3.1-flash."
   },
   {
     id: "typesafe",
