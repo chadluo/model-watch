@@ -447,31 +447,6 @@ const MODELS = [
     notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other."
   },
   {
-    id: "inclusionai",
-    name: "InclusionAI Ling",
-    lab: "Ant Group / InclusionAI",
-    labColor: "#1677ff",
-    icon: "⬥",
-    tier: "chinese",
-    description: "Ant Group's InclusionAI lab and its Ling family of open-weight MoE models, spanning efficient Lite/Flash tiers, trillion-parameter Ling-1T/2.x flagships, and domain-tuned finance, health, and vision variants.",
-    releases: [
-      { version: "Ling-Lite / Ling-Plus", date: "2025-03-07", note: "First open-source release; 16.8B (2.75B active) Lite + 290B (28.8B active) Plus MoE models, trained without premium GPUs" },
-      { version: "Ling-lite-1.5", date: "2025-05-10", note: "Reasoning-focused upgrade to Ling-lite" },
-      { version: "Ling 2.0 (Ling-mini-2.0 + Ling-flash-2.0)", date: "2025-09-10", note: "New 'Ling Scaling Laws' architecture (1/32 activation ratio, FP8 training); 16B/2B-active mini and 100B/6B-active flash variants" },
-      { version: "Ring-1T-preview", date: "2025-09-30", note: "First open-weight trillion-parameter 'thinking' (reasoning) checkpoint, built on Ling-1T-base" },
-      { version: "Ling-1T", date: "2025-10-09", note: "Trillion-parameter flagship (50B active, 128K context); formal launch of the three-line Ling/Ring/Ming family" },
-      { version: "Ling-2.5-1T", date: "2026-02-16", note: "Released alongside Ring-2.5-1T; up to 1M token context, reduced token usage vs. prior generation" },
-      { version: "Ling-2.6-1T", date: "2026-04-29", note: "Adds 'fast thinking' mechanism cutting token overhead for agent execution" },
-      { version: "Ling-3.0-flash", date: "2026-07-23", note: "124B MoE (~5.1B active); announced free on OpenRouter/Kilo, open-sourced under MIT license Aug 7" },
-      { version: "Ling-3.0-tiny", date: "2026-08-06", note: "7.9B MoE (1.3B active); switchable Thinking/Instant modes, 262K context" },
-      { version: "Ling-3.0-flash-Fin", date: "2026-08-27", note: "Finance-tuned variant of Ling-3.0-flash; weights open-sourced under MIT with FinFIRST benchmark" },
-      { version: "Ling-3.0-flash-Sante", date: "2026-09-04", note: "Health/medicine-tuned variant; targets medical reasoning and evidence-based retrieval" },
-      { version: "Ling-3.0-flash-VL", date: "2026-09-10", note: "Native multimodal vision-language variant; adds VideoRoPE for video understanding, 262K context" },
-      { version: "Ling-3.1-flash", date: "2026-09-30", note: "560B total/~25B active MoE; targets agent, search, office and specialist workloads; up to 1M-token context (capped at 256K during a two-week free trial), open-source release planned after the trial" },
-    ],
-    notes: "InclusionAI moved from a standing start (lab founded Feb 2025) to trillion-parameter open-source flagships by October 2025, then settled into roughly bimonthly Ling-2.x flagship upgrades punctuated by a burst of domain-specific Ling-3.0-flash variants (Fin, Sante, VL) in Aug–Sep 2026, followed immediately by the next-generation Ling-3.1-flash."
-  },
-  {
     id: "typesafe",
     name: "TypeSafe Jev",
     lab: "TypeSafe AI",
@@ -503,44 +478,5 @@ const MODELS = [
       { version: "Grok 4.7", date: "2026-09-21", note: "2.1T-param frontier model for coding, agentic, and knowledge work" },
     ],
     notes: "xAI accelerated from 6-12 month gaps (Grok-1 through Grok-4) to a roughly 6-10 week cadence through 2026. The company merged into SpaceX and rebranded SpaceXAI in July 2026."
-  },
-  {
-    id: "dots",
-    name: "RedNote Dots",
-    lab: "RedNote (Xiaohongshu) / Dots Studio",
-    labColor: "#ff2442",
-    icon: "✺",
-    tier: "chinese",
-    description: "Xiaohongshu (RedNote)'s in-house Dots Studio lab, shipping open-weight MoE and multimodal models under the dots.* and dots3 naming; an internal dots3 'note' build became the first AI system to score a perfect 42 at IMO 2026.",
-    releases: [
-      { version: "dots.llm1", date: "2025-06-06", note: "First open-weight release; 142B-total/14B-active MoE pretrained on 11.2T tokens of non-synthetic data; matched Qwen2.5-72B" },
-      { version: "dots.vlm1", date: "2025-08-07", note: "First vision-language model in the family; DeepSeek V3 backbone plus a self-trained 1.2B-param NaViT vision encoder; approached Gemini 2.5 Pro on vision benchmarks" },
-      { version: "dots3-note Preview", date: "2026-08-14", note: "Open-weight (Apache 2.0) lightweight tier of the new dots3 lineup; 280B MoE (16B active), 512K context; the dots3 'note' line's internal eval build scored a perfect 42 at IMO 2026 the previous month, the first AI system to do so, though that exact build was not released" },
-    ],
-    notes: "New entrant to OpenRouter's top-20 usage rankings as of September 2026. The ~14-month gap between dots.vlm1 and dots3-note Preview reflects the shift to the three-tier dots3 lineup (note/jazz/aria); the larger jazz and aria tiers have not yet shipped."
-  },
-  {
-    id: "mistral",
-    name: "Mistral",
-    lab: "Mistral AI",
-    labColor: "#fa520f",
-    icon: "⟐",
-    tier: "open",
-    description: "French AI lab Mistral AI's model family, mixing Apache-licensed open-weight releases with proprietary Large/Medium flagships; spans dense, MoE, vision, reasoning, and coding variants.",
-    releases: [
-      { version: "Mistral 7B", date: "2023-09-27", note: "First public model; 7.3B params, base and instruct variants" },
-      { version: "Mixtral 8x7B", date: "2023-12-11", note: "Sparse MoE activating 2 of 8 experts per token; matched or beat GPT-3.5 on many benchmarks" },
-      { version: "Mistral Large", date: "2024-02-26", note: "First flagship closed model; top-3 on MMLU at release behind GPT-4 and Gemini Ultra" },
-      { version: "Mistral NeMo", date: "2024-07-18", note: "12B model co-developed with NVIDIA; 128K context; became one of the most widely used free/open Mistral models" },
-      { version: "Mistral Large 2", date: "2024-07-24", note: "Second-gen flagship; improved multilingual, code and reasoning performance" },
-      { version: "Pixtral 12B", date: "2024-09-11", note: "First public vision-language model" },
-      { version: "Mistral Large 2.1 + Pixtral Large", date: "2024-11-18", note: "124B multimodal Pixtral Large alongside a Large 2.1 refresh (since deprecated)" },
-      { version: "Mistral Small 3", date: "2025-01-30", note: "24B Apache 2.0 model for local deployment and low-latency workloads" },
-      { version: "Magistral", date: "2025-06-10", note: "First dedicated reasoning family, Small and Medium variants" },
-      { version: "Mistral Large 3", date: "2025-12-02", note: "675B MoE (41B active) flagship, part of the Mistral 3 generation alongside new 14B/8B/3B dense models; Apache 2.0, 256K context" },
-      { version: "Mistral Small 4", date: "2026-03-16", note: "Unified Magistral (reasoning), Pixtral (vision) and Devstral (agentic coding) into one 119B MoE model; 256K context" },
-      { version: "Mistral Medium 3.5", date: "2026-04-28", note: "128B dense multimodal 'balance point' model with adjustable reasoning effort" },
-    ],
-    notes: "New entrant to OpenRouter's top-20 usage rankings as of September 2026, driven almost entirely by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships. Mistral alternates rapid small/open releases with periodic Large/Medium refreshes; no new flagship confirmed since Medium 3.5 in April 2026."
   },
 ];
