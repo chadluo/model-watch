@@ -505,21 +505,6 @@ const MODELS = [
     notes: "xAI accelerated from 6-12 month gaps (Grok-1 through Grok-4) to a roughly 6-10 week cadence through 2026. The company merged into SpaceX and rebranded SpaceXAI in July 2026."
   },
   {
-    id: "dots",
-    name: "RedNote Dots",
-    lab: "RedNote (Xiaohongshu) / Dots Studio",
-    labColor: "#ff2442",
-    icon: "✺",
-    tier: "chinese",
-    description: "Xiaohongshu (RedNote)'s in-house Dots Studio lab, shipping open-weight MoE and multimodal models under the dots.* and dots3 naming; an internal dots3 'note' build became the first AI system to score a perfect 42 at IMO 2026.",
-    releases: [
-      { version: "dots.llm1", date: "2025-06-06", note: "First open-weight release; 142B-total/14B-active MoE pretrained on 11.2T tokens of non-synthetic data; matched Qwen2.5-72B" },
-      { version: "dots.vlm1", date: "2025-08-07", note: "First vision-language model in the family; DeepSeek V3 backbone plus a self-trained 1.2B-param NaViT vision encoder; approached Gemini 2.5 Pro on vision benchmarks" },
-      { version: "dots3-note Preview", date: "2026-08-14", note: "Open-weight (Apache 2.0) lightweight tier of the new dots3 lineup; 280B MoE (16B active), 512K context; the dots3 'note' line's internal eval build scored a perfect 42 at IMO 2026 the previous month, the first AI system to do so, though that exact build was not released" },
-    ],
-    notes: "New entrant to OpenRouter's top-20 usage rankings as of September 2026. The ~14-month gap between dots.vlm1 and dots3-note Preview reflects the shift to the three-tier dots3 lineup (note/jazz/aria); the larger jazz and aria tiers have not yet shipped."
-  },
-  {
     id: "mistral",
     name: "Mistral",
     lab: "Mistral AI",
@@ -540,7 +525,9 @@ const MODELS = [
       { version: "Mistral Large 3", date: "2025-12-02", note: "675B MoE (41B active) flagship, part of the Mistral 3 generation alongside new 14B/8B/3B dense models; Apache 2.0, 256K context" },
       { version: "Mistral Small 4", date: "2026-03-16", note: "Unified Magistral (reasoning), Pixtral (vision) and Devstral (agentic coding) into one 119B MoE model; 256K context" },
       { version: "Mistral Medium 3.5", date: "2026-04-28", note: "128B dense multimodal 'balance point' model with adjustable reasoning effort" },
+      { version: "Robostral Navigate", date: "2026-07-08", note: "First embodied-robotics model; 8B params, navigates from a single RGB camera plus plain-language instructions (no LiDAR/depth); 76.6% success rate on R2R-CE unseen split" },
+      { version: "Shieldstral 1.0", date: "2026-08-04", note: "3B open-weight multimodal safety/moderation classifier; scores text and images against plain-language policies at inference time, no retraining needed; Apache 2.0, runs on a single 16GB GPU" },
     ],
-    notes: "New entrant to OpenRouter's top-20 usage rankings as of September 2026, driven almost entirely by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships. Mistral alternates rapid small/open releases with periodic Large/Medium refreshes; no new flagship confirmed since Medium 3.5 in April 2026."
+    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. No new Large/Medium/Small flagship confirmed since Medium 3.5 in April 2026, but Mistral branched into specialized side-models (Robostral robotics, Shieldstral safety) over the summer."
   },
 ];
