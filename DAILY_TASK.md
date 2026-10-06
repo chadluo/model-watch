@@ -8,7 +8,7 @@ Keep `MODELS` in `data.js` in sync with OpenRouter popularity, then record new r
 
 ## Config
 
-- Ranking source: OpenRouter Data API (https://openrouter.ai/docs/cookbook/administration/data-api), 7-day window, top 20.
+- Ranking source: OpenRouter Data API (https://openrouter.ai/docs/cookbook/administration/data-api.md, raw markdown; no `.md` = HTML), 7-day window, top 20.
 - Auth: `Authorization: Bearer $OPENROUTER_API_KEY`.
 - Important providers (never remove their families for ranking): OpenAI, Anthropic, Google, DeepSeek, Qwen, Z.ai, plus any
   other provider of similar independent reach. List may exceed 20.
