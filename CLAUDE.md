@@ -3,6 +3,12 @@
 Model Watch is a static, client-side website that tracks LLM release cadences — inspired by the MacRumors Buyer's Guide.
 It predicts whether a new model version is imminent based on each model family's historical average release cycle.
 
+## Daily routine
+
+A scheduled routine checks for new model releases every day. Its full task description lives in
+[`DAILY_TASK.md`](DAILY_TASK.md); the routine's own prompt just says to execute that file. Edit `DAILY_TASK.md` to
+change the routine's behavior.
+
 ## Tech stack
 
 Pure vanilla stack. No build step, no dependencies, no bundler.
