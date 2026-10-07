@@ -473,8 +473,9 @@ const MODELS = [
       { version: "Solar Open 2 (250B)", date: "2026-07-22", note: "250B-A15B open-weight agentic model; released under the Upstage Solar License" },
       { version: "Solar Pro 4", date: "2026-08-10", note: "524K context; agentic long-horizon tasks; API-only, closed weights" },
       { version: "Solar Mini 4", date: "2026-09-22", note: "35B MoE (3B active) compact agent model; 524K context; entered OpenRouter's top-20" },
+      { version: "Solar Decide", date: "2026-09-22", note: "Structured decision model served on Solar Mini 4; typed choice/score/yes-no outputs with calibrated probabilities instead of prose; 512K context; same /v1/systemone schema as TypeSafe's Jev" },
     ],
-    notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other."
+    notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other, and now also includes a non-chat 'decide' model alongside Mini 4."
   },
   {
     id: "typesafe",
