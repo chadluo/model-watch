@@ -74,6 +74,20 @@ const MODELS = [
     notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
   },
   {
+    id: "openai-oss",
+    name: "OpenAI gpt-oss",
+    lab: "OpenAI",
+    labColor: "#10a37f",
+    icon: "⬦",
+    tier: "open",
+    description: "OpenAI's open-weight gpt-oss family, the company's first open-weight release since GPT-2, built for local/on-device reasoning, coding and agentic use.",
+    releases: [
+      { version: "gpt-oss-120b + gpt-oss-20b", date: "2025-08-05", note: "First OpenAI open-weight release since GPT-2; Apache 2.0; 120B (5.1B active) and 20B (3.6B active) MoE reasoning models; 120B comparable to o4-mini" },
+      { version: "gpt-oss-safeguard-120b + gpt-oss-safeguard-20b", date: "2025-10-29", note: "Open-weight reasoning models fine-tuned for safety-classification tasks against a developer-supplied policy" },
+    ],
+    notes: "Two releases so far, roughly three months apart. No new base-model update since the safeguard variant; still a top-20 OpenRouter family by usage."
+  },
+  {
     id: "claude-sonnet",
     name: "Claude Sonnet",
     lab: "Anthropic",
@@ -325,6 +339,22 @@ const MODELS = [
     notes: "Xiaomi entered the frontier LLM space in late 2025 with a focus on agentic and omnimodal capabilities."
   },
   {
+    id: "rednote-dots",
+    name: "RedNote dots",
+    lab: "RedNote (Xiaohongshu)",
+    labColor: "#ff2442",
+    icon: "❁",
+    tier: "chinese",
+    description: "RedNote (Xiaohongshu)'s hi lab and its open-weight dots model family, spanning the original dots.llm1 MoE language model, document-parsing and vision-language variants, and the dots3 generation for agentic and multimodal reasoning.",
+    releases: [
+      { version: "dots.llm1", date: "2025-06-06", note: "First open-weight release from hi lab; 142B MoE (14B active), trained on 11.2T non-synthetic tokens; competitive with Qwen2.5-72B" },
+      { version: "dots.ocr", date: "2025-07-30", note: "Multilingual document-parsing vision-language model; unifies layout detection and content recognition in one 1.7B-param model" },
+      { version: "dots.vlm1", date: "2025-08-07", note: "First vision-language model in the dots family; NaViT vision encoder trained from scratch, paired with a DeepSeek-V3 LLM backbone" },
+      { version: "dots3-note-preview", date: "2026-08-14", note: "Lightest model in the dots3 series; 280B MoE (16B active), 512K context, text/image/audio; internal harness scored a certified 42/42 (gold) at IMO 2026" },
+    ],
+    notes: "hi lab shipped three specialized dots.llm1-generation models in quick succession during mid-2025 (language, OCR, vision-language), then went quiet for a year before the dots3 generation debuted in August 2026."
+  },
+  {
     id: "minimax",
     name: "MiniMax",
     lab: "MiniMax",
@@ -443,33 +473,9 @@ const MODELS = [
       { version: "Solar Open 2 (250B)", date: "2026-07-22", note: "250B-A15B open-weight agentic model; released under the Upstage Solar License" },
       { version: "Solar Pro 4", date: "2026-08-10", note: "524K context; agentic long-horizon tasks; API-only, closed weights" },
       { version: "Solar Mini 4", date: "2026-09-22", note: "35B MoE (3B active) compact agent model; 524K context; entered OpenRouter's top-20" },
+      { version: "Solar Decide", date: "2026-09-22", note: "Structured decision model served on Solar Mini 4; typed choice/score/yes-no outputs with calibrated probabilities instead of prose; 512K context; same /v1/systemone schema as TypeSafe's Jev" },
     ],
-    notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other."
-  },
-  {
-    id: "inclusionai",
-    name: "InclusionAI Ling",
-    lab: "Ant Group / InclusionAI",
-    labColor: "#1677ff",
-    icon: "⬥",
-    tier: "chinese",
-    description: "Ant Group's InclusionAI lab and its Ling family of open-weight MoE models, spanning efficient Lite/Flash tiers, trillion-parameter Ling-1T/2.x flagships, and domain-tuned finance, health, and vision variants.",
-    releases: [
-      { version: "Ling-Lite / Ling-Plus", date: "2025-03-07", note: "First open-source release; 16.8B (2.75B active) Lite + 290B (28.8B active) Plus MoE models, trained without premium GPUs" },
-      { version: "Ling-lite-1.5", date: "2025-05-10", note: "Reasoning-focused upgrade to Ling-lite" },
-      { version: "Ling 2.0 (Ling-mini-2.0 + Ling-flash-2.0)", date: "2025-09-10", note: "New 'Ling Scaling Laws' architecture (1/32 activation ratio, FP8 training); 16B/2B-active mini and 100B/6B-active flash variants" },
-      { version: "Ring-1T-preview", date: "2025-09-30", note: "First open-weight trillion-parameter 'thinking' (reasoning) checkpoint, built on Ling-1T-base" },
-      { version: "Ling-1T", date: "2025-10-09", note: "Trillion-parameter flagship (50B active, 128K context); formal launch of the three-line Ling/Ring/Ming family" },
-      { version: "Ling-2.5-1T", date: "2026-02-16", note: "Released alongside Ring-2.5-1T; up to 1M token context, reduced token usage vs. prior generation" },
-      { version: "Ling-2.6-1T", date: "2026-04-29", note: "Adds 'fast thinking' mechanism cutting token overhead for agent execution" },
-      { version: "Ling-3.0-flash", date: "2026-07-23", note: "124B MoE (~5.1B active); announced free on OpenRouter/Kilo, open-sourced under MIT license Aug 7" },
-      { version: "Ling-3.0-tiny", date: "2026-08-06", note: "7.9B MoE (1.3B active); switchable Thinking/Instant modes, 262K context" },
-      { version: "Ling-3.0-flash-Fin", date: "2026-08-27", note: "Finance-tuned variant of Ling-3.0-flash; weights open-sourced under MIT with FinFIRST benchmark" },
-      { version: "Ling-3.0-flash-Sante", date: "2026-09-04", note: "Health/medicine-tuned variant; targets medical reasoning and evidence-based retrieval" },
-      { version: "Ling-3.0-flash-VL", date: "2026-09-10", note: "Native multimodal vision-language variant; adds VideoRoPE for video understanding, 262K context" },
-      { version: "Ling-3.1-flash", date: "2026-09-30", note: "560B total/~25B active MoE; targets agent, search, office and specialist workloads; up to 1M-token context (capped at 256K during a two-week free trial), open-source release planned after the trial" },
-    ],
-    notes: "InclusionAI moved from a standing start (lab founded Feb 2025) to trillion-parameter open-source flagships by October 2025, then settled into roughly bimonthly Ling-2.x flagship upgrades punctuated by a burst of domain-specific Ling-3.0-flash variants (Fin, Sante, VL) in Aug–Sep 2026, followed immediately by the next-generation Ling-3.1-flash."
+    notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other, and now also includes a non-chat 'decide' model alongside Mini 4."
   },
   {
     id: "typesafe",
