@@ -43,6 +43,7 @@ const MODELS = [
       { version: "GPT-5.6-Cyber", date: "2026-08-10", note: "Gated cybersecurity variant of Sol with relaxed safeguards for vetted defenders; part of expanded Daybreak Red/Blue access program" },
       { version: "GPT-6 Sol", date: "2026-09-22", note: "Balanced coding/reasoning tier; ~half the factual-mistake rate of GPT-5.6 Sol at half the price ($2/$10 per MTok)" },
       { version: "GPT-6.1 Sol", date: "2026-09-29", note: "Near-Astra performance on agentic coding, computer use and professional work at one-fifth of Astra's price ($2/$10 per MTok); Ultrafast tier (up to 8x faster in Codex) to follow" },
+      { version: "GPT-6 Sol (October safety refresh)", date: "2026-10-07", note: "Broad ChatGPT rollout to all free/paid users replacing GPT-5.6 Sol there; updated safety training incorporating Astra's advances, stronger multi-turn jailbreak resistance, 99.99% instruction-hierarchy robustness; rated High capability for cyber and bio/chem under the Preparedness Framework" },
     ],
     notes: "OpenAI accelerated to near-monthly releases across both GPT and o-series lines since mid-2025. Sol inherits the full GPT history; the Astra/Sol/Terra/Luna tier split began with GPT-5.6."
   },
@@ -70,8 +71,9 @@ const MODELS = [
     releases: [
       { version: "GPT-5.6 Luna", date: "2026-06-26", note: "Fast/low-cost tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
       { version: "GPT-6 Luna", date: "2026-09-22", note: "Lightweight high-volume tier for summarization/extraction; $0.10/$0.50 per MTok, half the price of GPT-5.6 Luna" },
+      { version: "GPT-6 Luna (October safety refresh)", date: "2026-10-07", note: "Broad ChatGPT rollout to all free/paid users replacing GPT-5.6 Luna there; updated safety training incorporating Astra's advances, improved MentalHealthBench scores across all acuity levels; rated High capability for cyber and bio/chem" },
     ],
-    notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
+    notes: "Three releases so far, with the gap shrinking from 88 days (5.6→6) to 15 days (6→6 October refresh) — rapid-fire safety-training updates layered onto the same tier."
   },
   {
     id: "openai-oss",
@@ -433,6 +435,29 @@ const MODELS = [
       { version: "Hy4-preview", date: "2026-08-28", note: "770B total / 49B active MoE; 1M context; Apache 2.0; 85.4 Terminal-Bench 2.1; DeepSWE jumped 28.0→64.3" },
     ],
     notes: "Roughly annual cadence 2023-2024, then accelerating through 2025-2026 as Tencent moved to a numbered open-weight \"Hy\" series — gaps have compressed from ~12 months to ~7-12 weeks between the latest releases."
+  },
+  {
+    id: "ling",
+    name: "Ling",
+    lab: "Ant Group",
+    labColor: "#be123c",
+    icon: "☄",
+    tier: "chinese",
+    description: "Ant Group's InclusionAI lab's Ling series of efficient MoE language models, ranging from trillion-parameter flagships to fast, domain-specialized \"flash\" variants for coding, finance and healthcare.",
+    releases: [
+      { version: "Ling-lite + Ling-plus", date: "2025-03-07", note: "First open-source Ling MoE pair: Ling-lite (16.8B total/2.75B active) and Ling-plus (290B total/28.8B active), 64K context; MIT license; trained on commodity GPUs per the 'Every FLOP Counts' paper" },
+      { version: "Ling-lite-0415", date: "2025-04-15", note: "Upgrade to Ling-lite with notable gains in code and math" },
+      { version: "Ling-lite-1.5", date: "2025-05-10", note: "Reasoning-focused upgrade with significant gains over prior Ling-lite checkpoints" },
+      { version: "Ling-mini-2.0 + Ling-flash-2.0", date: "2025-09-08", note: "New MoE architecture family: Ling-mini-2.0 (16B total/1.4B active) and Ling-flash-2.0 (100B total/6.1B active), 32K context extendable to 128K via YaRN; MIT license" },
+      { version: "Ling-1T", date: "2025-10-09", note: "First trillion-parameter Ling 2.0 flagship, ~50B active, 128K context, 20T+ training tokens; 70.42% on AIME 2025; MIT license" },
+      { version: "Ling-2.5-1T", date: "2026-02-15", note: "Trillion-parameter flagship with up to 1M token context; matches thinking-model math benchmarks using far fewer tokens per response than peers" },
+      { version: "Ling-2.6-flash + Ling-2.6-1T", date: "2026-04-22", note: "Ling-2.6-flash (104B total/7.4B active, 256K context, 61.2 SWE-bench Verified) and Ling-2.6-1T (~1T total/~63B active); both open-sourced under MIT license" },
+      { version: "Ling-3.0-flash", date: "2026-07-24", note: "Agent-focused MoE, 124B total/5.1B active (1/64 activation ratio), native 256K context scaling to 1M; positioned as a fast execution layer alongside larger reasoning models" },
+      { version: "Ling-3.0-flash-Sante", date: "2026-09-04", note: "Healthcare-domain fine-tune of Ling-3.0-flash for medical reasoning and evidence-based retrieval; competitive on MedXpertQA and HealthBench Professional among open models; hosted API only" },
+      { version: "Ling-3.0-flash-Fin", date: "2026-09-08", note: "Finance-domain fine-tune of Ling-3.0-flash (124B/5.1B active) open-sourced for real-world financial workflows" },
+      { version: "Ling-3.1-flash", date: "2026-09-30", note: "Hybrid reasoning MoE, ~560B total/25B active, up to 1M context; claims SOTA among open models on AIME26 and SWE-bench Verified; hosted API only at launch, open weights promised later" },
+    ],
+    notes: "Ling's cadence has compressed sharply through 2026 — from roughly quarterly flagship drops in 2025 to a cluster of specialized flash variants (healthcare, finance, hybrid-reasoning) shipping every 2-4 weeks by Q3 2026."
   },
   {
     id: "nvidia",
