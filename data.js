@@ -533,7 +533,8 @@ const MODELS = [
       { version: "Mistral Medium 3.5", date: "2026-04-28", note: "128B dense multimodal 'balance point' model with adjustable reasoning effort" },
       { version: "Robostral Navigate", date: "2026-07-08", note: "First embodied-robotics model; 8B params, navigates from a single RGB camera plus plain-language instructions (no LiDAR/depth); 76.6% success rate on R2R-CE unseen split" },
       { version: "Shieldstral 1.0", date: "2026-08-04", note: "3B open-weight multimodal safety/moderation classifier; scores text and images against plain-language policies at inference time, no retraining needed; Apache 2.0, runs on a single 16GB GPU" },
+      { version: "Mistral Large 4 (Preview)", date: "2026-10-06", note: "Public preview of 1.05T-param multimodal MoE (49B active); Artificial Analysis Intelligence Index 38; open weights planned for later in October" },
     ],
-    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. No new Large/Medium/Small flagship confirmed since Medium 3.5 in April 2026, but Mistral branched into specialized side-models (Robostral robotics, Shieldstral safety) over the summer."
+    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 returns to the flagship line as a hosted preview ahead of an open-weight release."
   },
 ];
