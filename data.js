@@ -133,6 +133,22 @@ const MODELS = [
     notes: "Opus held a roughly bimonthly cadence through the 4.x generation, with Opus 5 continuing that pace as the everyday flagship below Fable."
   },
   {
+    id: "claude-haiku",
+    name: "Claude Haiku",
+    lab: "Anthropic",
+    labColor: "#c96442",
+    icon: "✿",
+    tier: "frontier",
+    description: "Anthropic's small, fast, low-cost Claude models, built for high-volume work like classification, summaries, subagents and live support.",
+    releases: [
+      { version: "Claude 3 Haiku", date: "2024-03-13", note: "Fastest and cheapest model of the Claude 3 family" },
+      { version: "Claude 3.5 Haiku", date: "2024-11-04", note: "Matched Claude 3 Opus on many benchmarks at a fraction of the cost" },
+      { version: "Claude Haiku 4.5", date: "2025-10-15", note: "Near-Sonnet 4 coding quality at a third of the cost and over twice the speed" },
+      { version: "Claude Haiku 5.5", date: "2026-10-07", note: "~75% cheaper than Haiku 4.5 on average; first Haiku with an adjustable effort setting; OSWorld 2.1 (offline subset) up from 15.7% to 72.4%" },
+    ],
+    notes: "Haiku ships at a slower, irregular cadence than Sonnet and Opus, with gaps of roughly 8 to 12 months between releases."
+  },
+  {
     id: "claude-fable",
     name: "Claude Fable",
     lab: "Anthropic",
