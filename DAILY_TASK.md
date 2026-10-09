@@ -13,10 +13,11 @@ Keep `MODELS` in `data.js` in sync with OpenRouter popularity, then record new r
 - Important providers (never remove their families for ranking): OpenAI, Anthropic, Google, DeepSeek, Qwen, Z.ai, plus any
   other provider of similar independent reach. List may exceed 20.
 - Pinned families (always keep; add if missing; ranking irrelevant, they hover near the top-20 edge):
+  - `claude-haiku` — Claude Haiku (lab: Anthropic, tier `frontier`)
   - `rednote-dots` — RedNote dots (lab: RedNote / Xiaohongshu, tier `chinese`)
   - `openai-oss` — OpenAI gpt-oss (lab: OpenAI, tier `open`)
 - Tier families, never merge into one per-provider entry:
-  - Anthropic: `claude-fable`, `claude-opus`, `claude-sonnet` (+ Haiku if added).
+  - Anthropic: `claude-fable`, `claude-opus`, `claude-sonnet`, `claude-haiku`.
   - OpenAI: `openai-astra`, `openai-sol` (also holds legacy GPT-3.5..5.5 and o-series), `openai-terra`, `openai-luna`,
     `openai-oss`.
   - A release spanning several tiers → one `releases` entry per tier family, same date.
