@@ -491,8 +491,9 @@ const MODELS = [
       { version: "Solar Pro 4", date: "2026-08-10", note: "524K context; agentic long-horizon tasks; API-only, closed weights" },
       { version: "Solar Mini 4", date: "2026-09-22", note: "35B MoE (3B active) compact agent model; 524K context; entered OpenRouter's top-20" },
       { version: "Solar Decide", date: "2026-09-22", note: "Structured decision model served on Solar Mini 4; typed choice/score/yes-no outputs with calibrated probabilities instead of prose; 512K context; same /v1/systemone schema as TypeSafe's Jev" },
+      { version: "Solar Decide Flash", date: "2026-10-08", note: "Lower-latency Solar Decide variant tuned for routing/classification/policy-check calls; 512K context; $0.05/M input with free output, half the base Solar Decide rate" },
     ],
-    notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other, and now also includes a non-chat 'decide' model alongside Mini 4."
+    notes: "Upstage began as a purely open-weight family (Apache 2.0) then split into two parallel tracks: proprietary Pro/Mini API models (each usually preceded by an open preview) and periodic open-weight 'Solar Open' drops. Cadence has accelerated sharply through 2026, with Pro, Open, and Mini lines all refreshed within months of each other, and now also includes a non-chat 'decide' line (Decide, Decide Flash) alongside Mini 4."
   },
   {
     id: "typesafe",
@@ -572,28 +573,5 @@ const MODELS = [
       { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights planned to follow" },
     ],
     notes: "StepFun moved from roughly annual Step-1/Step-2 drops in 2024 to a fast, roughly quarterly Flash-tier cadence through 2025-2026, culminating in the trillion-scale-adjacent Step-5 Preview."
-  },
-  {
-    id: "ling",
-    name: "Ling",
-    lab: "InclusionAI (Ant Group)",
-    labColor: "#1677ff",
-    icon: "✺",
-    tier: "chinese",
-    description: "Ant Group's InclusionAI Ling series, open-weight MoE models scaling from lightweight Lite tiers to trillion-parameter flagships, alongside Ring reasoning and Ming multimodal siblings.",
-    releases: [
-      { version: "Ling-Lite + Ling-Plus", date: "2025-03-01", note: "InclusionAI's debut open-weight MoE pair; Lite 16.8B (2.75B active), Plus 290B (28.8B active); trained without premium GPUs" },
-      { version: "Ling-2.0 (mini-2.0 + flash-2.0)", date: "2025-10-01", note: "Second-gen MoE lineup spanning Ling-mini-2.0 (16B) through Ling-flash-2.0 (100B); efficiency-tuned open weights" },
-      { version: "Ling-1T", date: "2025-10-08", note: "Trillion-parameter non-thinking flagship (~50B active); MIT license; led open-source models on ArtifactsBench" },
-      { version: "Ring-1T", date: "2025-10-13", note: "Reasoning (thinking-mode) counterpart to Ling-1T; ~1T MoE; preview shipped Sept 30, full release two weeks later" },
-      { version: "Ling-2.5-1T", date: "2026-02-01", note: "Trillion-param refresh of the Ling-1T generation with improved benchmark scores" },
-      { version: "Ling-2.6-1T", date: "2026-04-29", note: "Open-sourced trillion-param agent-focused flagship built for long-horizon tool use" },
-      { version: "Ling-3.0-flash", date: "2026-07-24", note: "124B MoE (5.1B active) runs at near-frontier quality; API/OpenRouter launch first, open weights followed Aug 5 under MIT" },
-      { version: "Ling-3.0-tiny", date: "2026-08-10", note: "Smallest Ling-3.0 tier; 7.9B total / 1.3B active, for lightweight on-device deployment" },
-      { version: "Ling-3.0-flash-Sante", date: "2026-09-04", note: "Health-focused Ling-3.0-flash variant tuned for medical reasoning, clinical safety and evidence-based retrieval; 256K context" },
-      { version: "Ling-3.0-flash-VL", date: "2026-09-10", note: "Vision-language variant of Ling-3.0-flash, extending the same efficient MoE backbone to multimodal input" },
-      { version: "Ling-3.1-flash", date: "2026-09-30", note: "Newest Ling flagship; 560B MoE (25B active), 262K context; proprietary, weights not released" },
-    ],
-    notes: "InclusionAI (Ant Group's open-model org) debuted in March 2025 and quickly scaled to trillion-parameter MoE flagships, pairing non-thinking Ling releases with thinking-mode Ring siblings; cadence has accelerated to roughly monthly through 2026 with compact Flash/Tiny/Sante/VL spin-offs."
   },
 ];
