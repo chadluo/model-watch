@@ -256,8 +256,9 @@ const MODELS = [
       { version: "Muse Spark 1.2", date: "2026-08-05", note: "Coding-focused update with higher first-attempt accuracy; launched alongside Muse Code, Meta's first terminal-based coding agent" },
       { version: "Muse Glimmer", date: "2026-08-10", note: "Open-weight 30B model distilled from Muse Spark for on-device agentic use; runs on a single consumer GPU; Apache 2.0" },
       { version: "Muse Spark 1.3", date: "2026-09-02", note: "Agentic coding update; ~20% fewer tool calls and ~25% fewer tokens than 1.2; 1M context" },
+      { version: "Muse Wonder + Muse Wonder Full", date: "2026-10-12", note: "Meta's first frontier-class model line, built on the Muse Spark groundwork; targets long-horizon agentic work (planning, sub-agent delegation, error recovery); 1M context, text/image/video/audio/PDF input; Wonder via API/Muse Code at $4/$20 per MTok, Wonder Full is Muse Code subscription-only; Meta claims benchmark parity with Claude Fable 5.1 and GPT-6 Astra" },
     ],
-    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name."
+    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marked the transition away from the Llama name; Muse Wonder (Oct 2026) is Meta's first frontier-class model, positioned against Claude Fable and GPT-6 Astra."
   },
   {
     id: "deepseek",
