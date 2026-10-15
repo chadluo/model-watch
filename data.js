@@ -256,8 +256,9 @@ const MODELS = [
       { version: "Muse Spark 1.2", date: "2026-08-05", note: "Coding-focused update with higher first-attempt accuracy; launched alongside Muse Code, Meta's first terminal-based coding agent" },
       { version: "Muse Glimmer", date: "2026-08-10", note: "Open-weight 30B model distilled from Muse Spark for on-device agentic use; runs on a single consumer GPU; Apache 2.0" },
       { version: "Muse Spark 1.3", date: "2026-09-02", note: "Agentic coding update; ~20% fewer tool calls and ~25% fewer tokens than 1.2; 1M context" },
+      { version: "Muse Wonder + Muse Wonder Full", date: "2026-10-12", note: "Meta Superintelligence Labs' first frontier-class model line; Wonder via Meta Model API/Muse Code at $4/$20 per MTok, 1M context, adds Active Memory (cross-conversation recall) and Active Focus (multi-step task persistence); larger Wonder Full limited to Muse Code subscribers; independent Artificial Analysis Intelligence Index ~52/~56 (Meta's own benchmarks claim closer to Opus 5.5/Fable 5.1/GPT-6 Astra)" },
     ],
-    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name."
+    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marked the transition away from the Llama name; Muse Wonder is its first frontier-class line, competing directly with Opus/Fable/Astra."
   },
   {
     id: "deepseek",
@@ -505,8 +506,9 @@ const MODELS = [
     description: "TypeSafe AI's Jev, a 'System One' decision model that returns typed, schema-constrained outputs with calibrated confidence scores instead of free-form text — built for classify/route/score/branch decisions inside software rather than chat.",
     releases: [
       { version: "Jev", date: "2026-09-15", note: "First public model, released in early access the same day TypeSafe emerged from stealth with a $40M seed round led by DCVC; non-autoregressive, parallel-sampled typed outputs claimed 40-200x faster and far cheaper than comparable LLMs on classification-style tasks" },
+      { version: "Jev 1.14.0", date: "2026-10-14", note: "Preview release adds image-input support, a new `box` output type (bounding boxes, its first non-decision type), and longer-than-production context, gated behind 'danger zone' headers; stable jev-latest alias remains on 1.13.0" },
     ],
-    notes: "Single release so far — no cadence history yet. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
+    notes: "Two releases so far, 29 days apart — too short a history to call a firm cadence. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
   },
   {
     id: "xai",
