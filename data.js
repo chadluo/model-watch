@@ -171,7 +171,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners; opened Oct 13, 2026 to paid API/AI Studio developers and enterprises, AI Ultra subscribers in Antigravity, and Pro/Ultra subscribers in the Gemini app and Search" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -256,8 +256,9 @@ const MODELS = [
       { version: "Muse Spark 1.2", date: "2026-08-05", note: "Coding-focused update with higher first-attempt accuracy; launched alongside Muse Code, Meta's first terminal-based coding agent" },
       { version: "Muse Glimmer", date: "2026-08-10", note: "Open-weight 30B model distilled from Muse Spark for on-device agentic use; runs on a single consumer GPU; Apache 2.0" },
       { version: "Muse Spark 1.3", date: "2026-09-02", note: "Agentic coding update; ~20% fewer tool calls and ~25% fewer tokens than 1.2; 1M context" },
+      { version: "Muse Wonder + Muse Wonder Full", date: "2026-10-12", note: "Meta's first frontier-class models, larger than the lightweight Muse Spark line; Wonder served via Meta's Model API and Muse Code, Wonder Full limited to Muse Code subscribers; 1M context, multimodal (text/image/video/audio); adds Active Memory and Active Focus; $4/$20 per MTok; Artificial Analysis Intelligence Index ~52-56 vs. Claude Opus 5.5's 58" },
     ],
-    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name."
+    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marked the transition away from the Llama name; Muse Wonder is Meta's first attempt at a true frontier-tier model."
   },
   {
     id: "deepseek",
