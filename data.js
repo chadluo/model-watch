@@ -256,8 +256,9 @@ const MODELS = [
       { version: "Muse Spark 1.2", date: "2026-08-05", note: "Coding-focused update with higher first-attempt accuracy; launched alongside Muse Code, Meta's first terminal-based coding agent" },
       { version: "Muse Glimmer", date: "2026-08-10", note: "Open-weight 30B model distilled from Muse Spark for on-device agentic use; runs on a single consumer GPU; Apache 2.0" },
       { version: "Muse Spark 1.3", date: "2026-09-02", note: "Agentic coding update; ~20% fewer tool calls and ~25% fewer tokens than 1.2; 1M context" },
+      { version: "Muse Wonder + Muse Wonder Full", date: "2026-10-12", note: "First frontier-class models from Meta Superintelligence Labs; 'Active Memory' persists context across conversations; Wonder Full limited to Muse Code subscribers, Wonder available via API at $4/$20 per MTok; Wonder Full scores 56 vs. Claude Opus 5.5's 58 on the Artificial Analysis Intelligence Index" },
     ],
-    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name."
+    notes: "Meta rebranded its AI lab to Meta Superintelligence Labs in 2026. Muse Spark marks the transition away from the Llama name; Muse Wonder is its first frontier-class entrant."
   },
   {
     id: "deepseek",
@@ -469,8 +470,9 @@ const MODELS = [
       { version: "Nemotron 3 Super 120B-A12B", date: "2026-03-11", note: "120B MoE, 12B active; hybrid Mamba2-Transformer LatentMoE with multi-token prediction" },
       { version: "Nemotron 3 Ultra 550B-A55B", date: "2026-06-04", note: "550B MoE, 55B active; released under Linux Foundation OpenMDW-1.1, no usage-fee clauses" },
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
+      { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL."
   },
   {
     id: "upstage",
@@ -505,8 +507,9 @@ const MODELS = [
     description: "TypeSafe AI's Jev, a 'System One' decision model that returns typed, schema-constrained outputs with calibrated confidence scores instead of free-form text — built for classify/route/score/branch decisions inside software rather than chat.",
     releases: [
       { version: "Jev", date: "2026-09-15", note: "First public model, released in early access the same day TypeSafe emerged from stealth with a $40M seed round led by DCVC; non-autoregressive, parallel-sampled typed outputs claimed 40-200x faster and far cheaper than comparable LLMs on classification-style tasks" },
+      { version: "Jev 1.14", date: "2026-10-14", note: "Opt-in 'danger zone' experimental features: composable image inputs, a new bounding-box 'box' response type, and longer context; off by default and not yet recommended for production" },
     ],
-    notes: "Single release so far — no cadence history yet. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
+    notes: "Two releases so far, a month apart. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
   },
   {
     id: "xai",
