@@ -171,7 +171,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow; reached Google AI Pro/Ultra subscribers in the Gemini app Oct 13, with the Antigravity coding interface on macOS and 40+ connected apps; introductory pricing extended through Nov 30, 2026" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -471,8 +471,9 @@ const MODELS = [
       { version: "Nemotron 3 Ultra 550B-A55B", date: "2026-06-04", note: "550B MoE, 55B active; released under Linux Foundation OpenMDW-1.1, no usage-fee clauses" },
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
       { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
+      { version: "Nemotron 3.5 Bolt 74B-A9B", date: "2026-10-15", note: "74B MoE (9B active), 2-bit quantization-aware training fits in 24GB; on-device agents for NVIDIA RTX Spark laptops; smaller Bolt E4B variant for game NPCs due Oct 23" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and on-device inference with the 2-bit quantized Bolt line."
   },
   {
     id: "upstage",
