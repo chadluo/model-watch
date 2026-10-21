@@ -171,7 +171,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, reached general availability 2026-10-13 via the Gemini app, paid API tier, AI Mode in Search, and Antigravity for Google AI Pro/Ultra subscribers" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -284,6 +284,7 @@ const MODELS = [
       { version: "DeepSeek-V4-Pro-0813", date: "2026-08-13", note: "General-availability release of V4-Pro after April preview; up to 1M context/384K output, thinking and non-thinking modes" },
       { version: "DeepSeek-V4-Flash-Vision-Exp", date: "2026-08-21", note: "Experimental multimodal (vision) variant of V4-Flash; matches text/agent/reasoning benchmarks while adding image understanding" },
       { version: "DeepSeek-V4.1-Flash", date: "2026-09-10", note: "552B MoE with new Causal Encoder-Decoder architecture (8B active input/16B active output); native multimodal vision, 1M context, MIT license; from 2026-09-14 04:00 UTC, deepseek-v4-pro requests route here and use V4.1-Flash rates" },
+      { version: "DeepSeek-V4.1-Flash-1017", date: "2026-10-17", note: "Refreshed V4.1-Flash checkpoint; beats prior version on all 11 reported benchmarks, 77.0 on DeepSWE v1.1; adds Search/Fetch APIs; MIT-licensed weights" },
     ],
     notes: "DeepSeek maintains an extremely fast iteration cycle. V4 introduced trillion-parameter scale with MoE efficiency."
   },
@@ -415,22 +416,6 @@ const MODELS = [
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
-  },
-  {
-    id: "poolside",
-    name: "Poolside",
-    lab: "Poolside AI",
-    labColor: "#0d9488",
-    icon: "≈",
-    tier: "open",
-    description: "Poolside AI's coding-focused model family, from the original closed Malibu/Point pair to the open-weight Laguna series built for agentic software engineering.",
-    releases: [
-      { version: "Malibu + Point", date: "2024-12-04", note: "First public models, announced via AWS re:Invent; Malibu for deep coding/reasoning, Point for fast code completion; launched on Amazon EC2, Bedrock availability announced as 'coming soon'" },
-      { version: "Laguna XS.2 + M.1", date: "2026-04-28", note: "Second-generation family debut; XS.2 is a 33B-A3B open-weight (Apache 2.0) model for local agentic coding, M.1 a 225B-A23B proprietary flagship; both free for a limited time via API/OpenRouter" },
-      { version: "Laguna XS 2.1", date: "2026-07-02", note: "Update to the 33B-A3B open-weight tier; adds native reasoning between tool calls, 256K context" },
-      { version: "Laguna S 2.1", date: "2026-07-21", note: "118B-A8B open-weight model (OpenMDW-1.1 license); 1M context; matches models several times its size on Terminal-Bench 2.1/SWE-Bench Pro; free endpoint on OpenRouter" },
-    ],
-    notes: "Poolside shipped Malibu 2.1 and 2.2 updates through 2025 (exact dates unconfirmed) before pivoting to the open-weight Laguna family in April 2026; the multi-year Malibu-to-Laguna gap reflects a generational architecture change rather than typical cadence. Laguna itself has shipped on a roughly monthly-to-bimonthly rhythm since (XS.2/M.1 → XS 2.1 → S 2.1)."
   },
   {
     id: "tencent",
@@ -573,7 +558,7 @@ const MODELS = [
       { version: "Step-3", date: "2025-07-31", note: "First native multimodal reasoning model; 321B MoE (38B active); custom MFA attention, open-sourced StepMesh comms library" },
       { version: "Step-3.5-Flash", date: "2026-02-02", note: "Open-sourced agent-focused Flash model; 196B MoE (11B active); quickly topped OpenRouter usage rankings" },
       { version: "Step-3.7-Flash", date: "2026-05-29", note: "Next-gen open Flash model tuned for enterprise-scale agent, coding, search and multimodal production workflows" },
-      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights planned to follow" },
+      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; BF16/FP8 open weights published on Hugging Face/ModelScope under StepFun Model License 1.0 on 2026-10-15" },
     ],
     notes: "StepFun moved from roughly annual Step-1/Step-2 drops in 2024 to a fast, roughly quarterly Flash-tier cadence through 2025-2026, culminating in the trillion-scale-adjacent Step-5 Preview."
   },
