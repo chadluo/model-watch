@@ -171,7 +171,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, reached general availability 2026-10-13 via the Gemini API, Google AI Studio, Antigravity, and Google AI Pro/Ultra access in the Gemini app" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -284,6 +284,7 @@ const MODELS = [
       { version: "DeepSeek-V4-Pro-0813", date: "2026-08-13", note: "General-availability release of V4-Pro after April preview; up to 1M context/384K output, thinking and non-thinking modes" },
       { version: "DeepSeek-V4-Flash-Vision-Exp", date: "2026-08-21", note: "Experimental multimodal (vision) variant of V4-Flash; matches text/agent/reasoning benchmarks while adding image understanding" },
       { version: "DeepSeek-V4.1-Flash", date: "2026-09-10", note: "552B MoE with new Causal Encoder-Decoder architecture (8B active input/16B active output); native multimodal vision, 1M context, MIT license; from 2026-09-14 04:00 UTC, deepseek-v4-pro requests route here and use V4.1-Flash rates" },
+      { version: "DeepSeek-V4.1-Flash-1017", date: "2026-10-17", note: "Minor update checkpoint of V4.1-Flash; stronger reasoning, coding, agent and visual understanding with faster, shorter outputs; MIT-licensed weights on Hugging Face, served as deepseek-flash" },
     ],
     notes: "DeepSeek maintains an extremely fast iteration cycle. V4 introduced trillion-parameter scale with MoE efficiency."
   },
@@ -390,9 +391,9 @@ const MODELS = [
       { version: "MiniMax M2.7", date: "2026-03-18", note: "Multi-agent collaboration for complex real-world tasks; 205K context" },
       { version: "Hailuo 2.3", date: "2026-04-20", note: "Video generation; text-to-video and image-to-video" },
       { version: "MiniMax M3", date: "2026-05-31", note: "Multimodal (text/image/video input); agentic and coding focus; 1.05M context" },
-      { version: "MiniMax-M3.1-Flash-Preview", date: "2026-09-27", note: "Coding-focused preview shipped only inside the MiniMax Code agent tool; 1M context, 5-level reasoning-effort control; no model card, benchmarks, or standalone pricing published yet" },
+      { version: "MiniMax-M3.1-Flash-Preview", date: "2026-09-27", note: "Coding-focused preview shipped only inside the MiniMax Code agent tool; 1M context, 5-level reasoning-effort control; promoted to full public release 2026-10-19 via the API, M Plan subscription, and MiniMax Code (dropped the 'Preview' label), with claimed ~3x faster inference and 70% lower cost than the preview; open weights said to follow 2026-10-23" },
     ],
-    notes: "MiniMax kept a near-monthly cadence through mid-2025 into M3, then slowed: M3.1-Flash-Preview arrived four months after M3 as a soft, in-tool-only preview rather than a full launch."
+    notes: "MiniMax kept a near-monthly cadence through mid-2025 into M3, then slowed: M3.1-Flash-Preview arrived four months after M3 as a soft, in-tool-only preview, reaching full public release about three weeks later."
   },
   {
     id: "kimi",
@@ -415,22 +416,6 @@ const MODELS = [
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
-  },
-  {
-    id: "poolside",
-    name: "Poolside",
-    lab: "Poolside AI",
-    labColor: "#0d9488",
-    icon: "≈",
-    tier: "open",
-    description: "Poolside AI's coding-focused model family, from the original closed Malibu/Point pair to the open-weight Laguna series built for agentic software engineering.",
-    releases: [
-      { version: "Malibu + Point", date: "2024-12-04", note: "First public models, announced via AWS re:Invent; Malibu for deep coding/reasoning, Point for fast code completion; launched on Amazon EC2, Bedrock availability announced as 'coming soon'" },
-      { version: "Laguna XS.2 + M.1", date: "2026-04-28", note: "Second-generation family debut; XS.2 is a 33B-A3B open-weight (Apache 2.0) model for local agentic coding, M.1 a 225B-A23B proprietary flagship; both free for a limited time via API/OpenRouter" },
-      { version: "Laguna XS 2.1", date: "2026-07-02", note: "Update to the 33B-A3B open-weight tier; adds native reasoning between tool calls, 256K context" },
-      { version: "Laguna S 2.1", date: "2026-07-21", note: "118B-A8B open-weight model (OpenMDW-1.1 license); 1M context; matches models several times its size on Terminal-Bench 2.1/SWE-Bench Pro; free endpoint on OpenRouter" },
-    ],
-    notes: "Poolside shipped Malibu 2.1 and 2.2 updates through 2025 (exact dates unconfirmed) before pivoting to the open-weight Laguna family in April 2026; the multi-year Malibu-to-Laguna gap reflects a generational architecture change rather than typical cadence. Laguna itself has shipped on a roughly monthly-to-bimonthly rhythm since (XS.2/M.1 → XS 2.1 → S 2.1)."
   },
   {
     id: "tencent",
@@ -471,8 +456,9 @@ const MODELS = [
       { version: "Nemotron 3 Ultra 550B-A55B", date: "2026-06-04", note: "550B MoE, 55B active; released under Linux Foundation OpenMDW-1.1, no usage-fee clauses" },
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
       { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
+      { version: "Nemotron 3.5 Bolt 74B-A9B", date: "2026-10-15", note: "74B MoE vision-language model (9B active); native 2-bit quantization fits in 24GB memory; local agentic-task model for RTX Spark, runs via llama.cpp/vLLM/Ollama" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and Bolt."
   },
   {
     id: "upstage",
