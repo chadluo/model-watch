@@ -509,11 +509,10 @@ const MODELS = [
     tier: "frontier",
     description: "TypeSafe AI's Jev, a 'System One' decision model that returns typed, schema-constrained outputs with calibrated confidence scores instead of free-form text — built for classify/route/score/branch decisions inside software rather than chat.",
     releases: [
-      { version: "Jev", date: "2026-09-15", note: "First public model, released in early access the same day TypeSafe emerged from stealth with a $40M seed round led by DCVC; non-autoregressive, parallel-sampled typed outputs claimed 40-200x faster and far cheaper than comparable LLMs on classification-style tasks" },
-      { version: "Jev 1.13", date: "2026-09-17", note: "First point release under TypeSafe's version numbering, two days after the initial Jev launch" },
+      { version: "Jev 1.13", date: "2026-09-15", note: "First public model (API id jev-1.13.0), released in early access the same day TypeSafe emerged from stealth with a $40M seed round led by DCVC; non-autoregressive, parallel-sampled typed outputs claimed 40-200x faster and far cheaper than comparable LLMs on classification-style tasks" },
       { version: "Jev 1.14", date: "2026-10-14", note: "Opt-in 'danger zone' experimental features: composable image inputs, a new bounding-box 'box' response type, and longer context; off by default and not yet recommended for production" },
     ],
-    notes: "Three releases so far: Jev 1.13 followed the initial Jev launch within days, then Jev 1.14 came almost a month later. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
+    notes: "Two releases so far: Jev 1.13 launched with TypeSafe's public debut, then Jev 1.14 followed about a month later. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
   },
   {
     id: "xai",
