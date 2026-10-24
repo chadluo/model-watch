@@ -284,6 +284,7 @@ const MODELS = [
       { version: "DeepSeek-V4-Pro-0813", date: "2026-08-13", note: "General-availability release of V4-Pro after April preview; up to 1M context/384K output, thinking and non-thinking modes" },
       { version: "DeepSeek-V4-Flash-Vision-Exp", date: "2026-08-21", note: "Experimental multimodal (vision) variant of V4-Flash; matches text/agent/reasoning benchmarks while adding image understanding" },
       { version: "DeepSeek-V4.1-Flash", date: "2026-09-10", note: "552B MoE with new Causal Encoder-Decoder architecture (8B active input/16B active output); native multimodal vision, 1M context, MIT license; from 2026-09-14 04:00 UTC, deepseek-v4-pro requests route here and use V4.1-Flash rates" },
+      { version: "DeepSeek-V4.1-Flash-1017", date: "2026-10-17", note: "Post-trained checkpoint update to V4.1-Flash; higher benchmark scores, faster completions, shorter outputs; adds a Search/Fetch API; weights published on Hugging Face under MIT license" },
     ],
     notes: "DeepSeek maintains an extremely fast iteration cycle. V4 introduced trillion-parameter scale with MoE efficiency."
   },
@@ -391,8 +392,9 @@ const MODELS = [
       { version: "Hailuo 2.3", date: "2026-04-20", note: "Video generation; text-to-video and image-to-video" },
       { version: "MiniMax M3", date: "2026-05-31", note: "Multimodal (text/image/video input); agentic and coding focus; 1.05M context" },
       { version: "MiniMax-M3.1-Flash-Preview", date: "2026-09-27", note: "Coding-focused preview shipped only inside the MiniMax Code agent tool; 1M context, 5-level reasoning-effort control; no model card, benchmarks, or standalone pricing published yet" },
+      { version: "MiniMax-M3.1-Flash", date: "2026-10-19", note: "Full standalone API launch of M3.1-Flash, dropping the in-tool-only Preview; 1M context, multimodal, tuned for agentic/coding use; MiniMax claims large cost and speed gains over M3" },
     ],
-    notes: "MiniMax kept a near-monthly cadence through mid-2025 into M3, then slowed: M3.1-Flash-Preview arrived four months after M3 as a soft, in-tool-only preview rather than a full launch."
+    notes: "MiniMax kept a near-monthly cadence through mid-2025 into M3, then slowed: M3.1-Flash-Preview arrived four months after M3 as a soft, in-tool-only preview, with a full standalone M3.1-Flash launch following three weeks later."
   },
   {
     id: "kimi",
@@ -471,8 +473,9 @@ const MODELS = [
       { version: "Nemotron 3 Ultra 550B-A55B", date: "2026-06-04", note: "550B MoE, 55B active; released under Linux Foundation OpenMDW-1.1, no usage-fee clauses" },
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
       { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
+      { version: "Nemotron 3.5 Bolt 74B-A9B", date: "2026-10-15", note: "Announced alongside Super VL; 74B MoE (9B active), quantized to fit 24GB at 2-bit; paired with the RTX Spark laptop launch; Artificial Analysis Intelligence Index 21.4 vs. Super VL's 26.5" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and a quantized edge tier with Bolt, both announced the same day."
   },
   {
     id: "upstage",
@@ -507,9 +510,10 @@ const MODELS = [
     description: "TypeSafe AI's Jev, a 'System One' decision model that returns typed, schema-constrained outputs with calibrated confidence scores instead of free-form text — built for classify/route/score/branch decisions inside software rather than chat.",
     releases: [
       { version: "Jev", date: "2026-09-15", note: "First public model, released in early access the same day TypeSafe emerged from stealth with a $40M seed round led by DCVC; non-autoregressive, parallel-sampled typed outputs claimed 40-200x faster and far cheaper than comparable LLMs on classification-style tasks" },
+      { version: "Jev 1.13", date: "2026-09-17", note: "First point release under TypeSafe's version numbering, two days after the initial Jev launch" },
       { version: "Jev 1.14", date: "2026-10-14", note: "Opt-in 'danger zone' experimental features: composable image inputs, a new bounding-box 'box' response type, and longer context; off by default and not yet recommended for production" },
     ],
-    notes: "Two releases so far, a month apart. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
+    notes: "Three releases so far: Jev 1.13 followed the initial Jev launch within days, then Jev 1.14 came almost a month later. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
   },
   {
     id: "xai",
