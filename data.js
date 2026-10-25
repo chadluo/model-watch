@@ -9,8 +9,9 @@ const MODELS = [
     description: "OpenAI's top-end GPT-6 Astra tier, positioned above Sol for the most demanding reasoning and agentic work.",
     releases: [
       { version: "GPT-6 Astra", date: "2026-09-03", note: "First OpenAI model rated 'Critical' cyber risk (up from 'High'); 1M token context" },
+      { version: "GPT-6 Astra Ultrafast", date: "2026-09-29", note: "High-speed serving tier offering up to 8x faster generation (via Codex) at roughly 6x Astra's standard price ($60/$300 per MTok short-context, $120/$450 long-context); gated to the $500/mo Pro 500 plan and eligible Enterprise/Edu tiers, US-only data residency" },
     ],
-    notes: "Single release so far — no cadence history yet. GPT-6.1 Sol (Sept 29) nearly matches Astra at one-fifth the price."
+    notes: "Two releases so far, 26 days apart — the Sept 29 Ultrafast speed tier followed the Sept 3 Astra launch, too short a history for a firm cadence. GPT-6.1 Sol (Sept 29) nearly matches Astra at one-fifth the price."
   },
   {
     id: "openai-sol",
@@ -43,6 +44,7 @@ const MODELS = [
       { version: "GPT-5.6-Cyber", date: "2026-08-10", note: "Gated cybersecurity variant of Sol with relaxed safeguards for vetted defenders; part of expanded Daybreak Red/Blue access program" },
       { version: "GPT-6 Sol", date: "2026-09-22", note: "Balanced coding/reasoning tier; ~half the factual-mistake rate of GPT-5.6 Sol at half the price ($2/$10 per MTok)" },
       { version: "GPT-6.1 Sol", date: "2026-09-29", note: "Near-Astra performance on agentic coding, computer use and professional work at one-fifth of Astra's price ($2/$10 per MTok); Ultrafast tier (up to 8x faster in Codex) to follow" },
+      { version: "GPT-6.1 Sol Ultrafast", date: "2026-10-08", note: "Faster-inference tier delivering near-Astra intelligence at up to 8x Sol Standard's speed, priced at $12/$60 per MTok (6x standard Sol rate); limited to Pro 500, eligible Enterprise pay-as-you-go, and Edu plans in ChatGPT Work/Codex, with US+EEA/Switzerland residency" },
     ],
     notes: "OpenAI accelerated to near-monthly releases across both GPT and o-series lines since mid-2025. Sol inherits the full GPT history; the Astra/Sol/Terra/Luna tier split began with GPT-5.6."
   },
@@ -70,8 +72,9 @@ const MODELS = [
     releases: [
       { version: "GPT-5.6 Luna", date: "2026-06-26", note: "Fast/low-cost tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
       { version: "GPT-6 Luna", date: "2026-09-22", note: "Lightweight high-volume tier for summarization/extraction; $0.10/$0.50 per MTok, half the price of GPT-5.6 Luna" },
+      { version: "GPT-6 Luna Decisions", date: "2026-10-06", note: "New Decisions API (public beta) powered by GPT-6 Luna, returning calibrated predicate probabilities, confidence-rated choices, or rubric scores via POST /v1/decisions instead of free-form text; ~10x faster than standard Luna, $0.10 per MTok input with no output charge, 1.05M context" },
     ],
-    notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
+    notes: "Three releases so far; the Oct 6 Decisions API spinoff arrived two weeks after GPT-6 Luna itself — still too short a history to call a firm cadence."
   },
   {
     id: "openai-oss",
@@ -415,6 +418,7 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro", date: "2026-10-23", note: "Open-weight ~3T-class MoE preview (API ids kimi-k3.1-pro and kimi-k3.1-pro-highspeed); 1M context; $2/$10 per MTok; full weights promised for Nov 4, 2026" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
   },
@@ -576,7 +580,7 @@ const MODELS = [
       { version: "Step-3", date: "2025-07-31", note: "First native multimodal reasoning model; 321B MoE (38B active); custom MFA attention, open-sourced StepMesh comms library" },
       { version: "Step-3.5-Flash", date: "2026-02-02", note: "Open-sourced agent-focused Flash model; 196B MoE (11B active); quickly topped OpenRouter usage rankings" },
       { version: "Step-3.7-Flash", date: "2026-05-29", note: "Next-gen open Flash model tuned for enterprise-scale agent, coding, search and multimodal production workflows" },
-      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights planned to follow" },
+      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open BF16/FP8 weights published Oct 15 on Hugging Face/ModelScope with vLLM/SGLang/Transformers serving support" },
     ],
     notes: "StepFun moved from roughly annual Step-1/Step-2 drops in 2024 to a fast, roughly quarterly Flash-tier cadence through 2025-2026, culminating in the trillion-scale-adjacent Step-5 Preview."
   },
