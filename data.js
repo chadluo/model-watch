@@ -70,8 +70,9 @@ const MODELS = [
     releases: [
       { version: "GPT-5.6 Luna", date: "2026-06-26", note: "Fast/low-cost tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
       { version: "GPT-6 Luna", date: "2026-09-22", note: "Lightweight high-volume tier for summarization/extraction; $0.10/$0.50 per MTok, half the price of GPT-5.6 Luna" },
+      { version: "GPT-6 Luna Decisions API", date: "2026-10-06", note: "New POST /v1/decisions endpoint built on GPT-6 Luna; returns typed answers (probability/choice/rubric score) instead of free text, ~10x faster than the Responses API; $0.10 per MTok input, no output-token charge; public beta Oct 6, general availability Oct 22" },
     ],
-    notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
+    notes: "Three releases so far; the Decisions API is a new typed-output product built on the Sept 22 Luna checkpoint rather than a model version bump, so cadence history here is still mixed and short."
   },
   {
     id: "openai-oss",
@@ -171,7 +172,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, reached general availability 2026-10-13 via API and Gemini app/Antigravity/AI Mode in Search" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -415,6 +416,7 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro", date: "2026-10-23", note: "3T-class open-weight successor to K3 (2.8T total/104B active MoE); 1M context, selectable reasoning effort (low/high/max), adds a 2-3x faster 'highspeed' variant; ~33% cheaper ($2/$10 per MTok) than K3; full weights due Nov 4" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
   },
@@ -576,7 +578,7 @@ const MODELS = [
       { version: "Step-3", date: "2025-07-31", note: "First native multimodal reasoning model; 321B MoE (38B active); custom MFA attention, open-sourced StepMesh comms library" },
       { version: "Step-3.5-Flash", date: "2026-02-02", note: "Open-sourced agent-focused Flash model; 196B MoE (11B active); quickly topped OpenRouter usage rankings" },
       { version: "Step-3.7-Flash", date: "2026-05-29", note: "Next-gen open Flash model tuned for enterprise-scale agent, coding, search and multimodal production workflows" },
-      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights planned to follow" },
+      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights (BF16/FP8/NVFP4) published to Hugging Face/ModelScope 2026-10-15" },
     ],
     notes: "StepFun moved from roughly annual Step-1/Step-2 drops in 2024 to a fast, roughly quarterly Flash-tier cadence through 2025-2026, culminating in the trillion-scale-adjacent Step-5 Preview."
   },
