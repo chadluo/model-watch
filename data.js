@@ -171,9 +171,9 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners; reached general availability via API, Gemini app, Antigravity and AI Mode in Search on 2026-10-13" },
     ],
-    notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
+    notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor. Went from Fairwind-partner preview to general availability in two weeks (Sept 30 → Oct 13)."
   },
   {
     id: "gemini-flash",
@@ -415,8 +415,9 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro", date: "2026-10-23", note: "Post-trained follow-up to K3; ~2.8T-param MoE; hosted API live immediately, open weights due 2026-11-04; 1M context; ~65.7% on Terminal-Bench 4.0 (company-reported), near Claude Opus 5.5's 66.4%; $2/$10 per MTok" },
     ],
-    notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
+    notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since, most recently with K3.1 Pro six weeks after K2.8 Preview."
   },
   {
     id: "poolside",
