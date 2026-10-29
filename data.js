@@ -415,6 +415,7 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro + Kimi K3.1 Pro Highspeed", date: "2026-10-23", note: "Upgraded K3 via additional post-training compute; ~2.8T MoE (104B active), 1M context; API-only launch, open weights due Nov 4; Highspeed variant runs 2-3x faster; Terminal-Bench 4.0 65.7%, ahead of GPT-6 Astra's 58.2%" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
   },
