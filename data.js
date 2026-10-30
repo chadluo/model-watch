@@ -56,8 +56,9 @@ const MODELS = [
     description: "OpenAI's balanced middle tier between Sol and Luna.",
     releases: [
       { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+      { version: "GPT-6.1 Terra", date: "2026-10-26", note: "First Terra refresh since 5.6; $1/$5 per MTok (half of Sol); OpenAI claims 3x faster task completion than Astra/Sol and Terminal-Bench 4.0 up from 21.5% to 50.3%" },
     ],
-    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+    notes: "Terra's first refresh landed four months after its 5.6 debut as GPT-6.1 Terra, continuing OpenAI's compressed sub-quarterly cadence across the Sol/Terra/Luna tiers."
   },
   {
     id: "openai-luna",
@@ -70,8 +71,9 @@ const MODELS = [
     releases: [
       { version: "GPT-5.6 Luna", date: "2026-06-26", note: "Fast/low-cost tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
       { version: "GPT-6 Luna", date: "2026-09-22", note: "Lightweight high-volume tier for summarization/extraction; $0.10/$0.50 per MTok, half the price of GPT-5.6 Luna" },
+      { version: "GPT-6 Luna Decisions", date: "2026-10-06", note: "Dedicated Decisions API surface built on GPT-6 Luna for structured, schema-constrained outputs; OpenAI claims up to 10x faster responses than standard chat completions" },
     ],
-    notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
+    notes: "Three releases so far: a steady base-model cadence (88 days from 5.6 Luna to 6 Luna) plus a dedicated Decisions API surface two weeks later."
   },
   {
     id: "openai-oss",
@@ -415,6 +417,7 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro", date: "2026-10-23", note: "First K3.1-series model, post-trained successor to K3; ~2.8T MoE (104B active); also ships a 2-3x faster Kimi K3.1 Pro Highspeed variant; $2/$10 per MTok; open weights due Nov 4" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
   },
