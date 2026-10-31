@@ -172,7 +172,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners; reached general availability 2026-10-13" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -476,8 +476,9 @@ const MODELS = [
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
       { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
       { version: "Nemotron 3.5 Bolt 74B-A9B", date: "2026-10-15", note: "Announced alongside Super VL; 74B MoE (9B active), quantized to fit 24GB at 2-bit; paired with the RTX Spark laptop launch; Artificial Analysis Intelligence Index 21.4 vs. Super VL's 26.5" },
+      { version: "Nemotron 3.5 Bolt E4B", date: "2026-10-23", note: "Edge-tier Bolt variant post-trained from Gemma-4-E4B-it; 8B total/4B effective params, 64K context, OpenMDW-1.1 license; ships with a DFlash speculative-decoding drafter and a 4GB quantized build" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and a quantized edge tier with Bolt, both announced the same day."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and edge tiers with the 74B-A9B and E4B Bolt variants."
   },
   {
     id: "upstage",
