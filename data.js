@@ -56,8 +56,9 @@ const MODELS = [
     description: "OpenAI's balanced middle tier between Sol and Luna.",
     releases: [
       { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+      { version: "GPT-6.1 Terra", date: "2026-10-26", note: "Replaces GPT-5.6 Terra; $1/$5 per MTok, half the price; rated 'Critical' cybersecurity tier under OpenAI's Preparedness Framework" },
     ],
-    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+    notes: "Terra's first refresh came four months after launch, cutting price in half while raising its Preparedness Framework rating to Critical for cybersecurity."
   },
   {
     id: "openai-luna",
@@ -415,6 +416,7 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro + Highspeed", date: "2026-10-23", note: "Post-trained upgrade of K3 (not a new base model); ~2.8T MoE (104B active), 1M context, $2/$10 per MTok; open weights planned for Nov 4" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
   },
@@ -474,8 +476,9 @@ const MODELS = [
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
       { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
       { version: "Nemotron 3.5 Bolt 74B-A9B", date: "2026-10-15", note: "Announced alongside Super VL; 74B MoE (9B active), quantized to fit 24GB at 2-bit; paired with the RTX Spark laptop launch; Artificial Analysis Intelligence Index 21.4 vs. Super VL's 26.5" },
+      { version: "Nemotron 3.5 Bolt E4B", date: "2026-10-23", note: "Open-weight edge variant post-trained from Gemma 4 E4B; 8B total / 4B active, 64K context; ships as a 4GB Q4_K_M build for local voice assistants, game NPCs and robots" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and a quantized edge tier with Bolt, both announced the same day."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and a quantized edge tier with Bolt, both announced the same day, with an even lighter Bolt E4B edge build following a week later."
   },
   {
     id: "upstage",
@@ -576,7 +579,7 @@ const MODELS = [
       { version: "Step-3", date: "2025-07-31", note: "First native multimodal reasoning model; 321B MoE (38B active); custom MFA attention, open-sourced StepMesh comms library" },
       { version: "Step-3.5-Flash", date: "2026-02-02", note: "Open-sourced agent-focused Flash model; 196B MoE (11B active); quickly topped OpenRouter usage rankings" },
       { version: "Step-3.7-Flash", date: "2026-05-29", note: "Next-gen open Flash model tuned for enterprise-scale agent, coding, search and multimodal production workflows" },
-      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights planned to follow" },
+      { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights (BF16/FP8) followed a week later, Oct 15, under StepFun's own Community License" },
     ],
     notes: "StepFun moved from roughly annual Step-1/Step-2 drops in 2024 to a fast, roughly quarterly Flash-tier cadence through 2025-2026, culminating in the trillion-scale-adjacent Step-5 Preview."
   },
