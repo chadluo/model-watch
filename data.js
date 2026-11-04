@@ -56,8 +56,9 @@ const MODELS = [
     description: "OpenAI's balanced middle tier between Sol and Luna.",
     releases: [
       { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+      { version: "GPT-6.1 Terra", date: "2026-10-26", note: "Replaces GPT-5.6 Terra same-day across ChatGPT Work/Codex/API; $1/$5 per MTok (50% cheaper than GPT-5.6 Terra and GPT-6.1 Sol); ~3x faster agents; Terminal-Bench 4.0 50.3% vs. 21.5% for 5.6 Terra; ~1.05M context" },
     ],
-    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+    notes: "Four-month gap between GPT-5.6 Terra and its GPT-6.1 refresh — the longest of the three GPT-6.1-generation tier updates so far."
   },
   {
     id: "openai-luna",
@@ -171,7 +172,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, reached general availability for all developers (AI Studio/Vertex AI) and Gemini app AI Pro/Ultra subscribers 2026-10-13" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -415,24 +416,9 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro", date: "2026-10-23", note: "API-only launch via OpenAI-compatible endpoint; 1M context; targets coding/agentic/financial-research use; same-day 'Highspeed' variant runs 2-3x faster" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
-  },
-  {
-    id: "poolside",
-    name: "Poolside",
-    lab: "Poolside AI",
-    labColor: "#0d9488",
-    icon: "≈",
-    tier: "open",
-    description: "Poolside AI's coding-focused model family, from the original closed Malibu/Point pair to the open-weight Laguna series built for agentic software engineering.",
-    releases: [
-      { version: "Malibu + Point", date: "2024-12-04", note: "First public models, announced via AWS re:Invent; Malibu for deep coding/reasoning, Point for fast code completion; launched on Amazon EC2, Bedrock availability announced as 'coming soon'" },
-      { version: "Laguna XS.2 + M.1", date: "2026-04-28", note: "Second-generation family debut; XS.2 is a 33B-A3B open-weight (Apache 2.0) model for local agentic coding, M.1 a 225B-A23B proprietary flagship; both free for a limited time via API/OpenRouter" },
-      { version: "Laguna XS 2.1", date: "2026-07-02", note: "Update to the 33B-A3B open-weight tier; adds native reasoning between tool calls, 256K context" },
-      { version: "Laguna S 2.1", date: "2026-07-21", note: "118B-A8B open-weight model (OpenMDW-1.1 license); 1M context; matches models several times its size on Terminal-Bench 2.1/SWE-Bench Pro; free endpoint on OpenRouter" },
-    ],
-    notes: "Poolside shipped Malibu 2.1 and 2.2 updates through 2025 (exact dates unconfirmed) before pivoting to the open-weight Laguna family in April 2026; the multi-year Malibu-to-Laguna gap reflects a generational architecture change rather than typical cadence. Laguna itself has shipped on a roughly monthly-to-bimonthly rhythm since (XS.2/M.1 → XS 2.1 → S 2.1)."
   },
   {
     id: "tencent",
@@ -474,8 +460,10 @@ const MODELS = [
       { version: "Nemotron 3.5 Lightning", date: "2026-08-11", note: "30B MoE, 3B active; execution-layer model for high-volume agents, up to 4x output speed" },
       { version: "Nemotron 3.5 Super VL", date: "2026-10-15", note: "Multimodal (vision-language) extension of the 3.5 generation; 120B MoE, 12B active; hybrid Mamba-2/MoE/attention backbone paired with NVIDIA's C-RADIO v4-H vision encoder; up to 1M context, image/video understanding" },
       { version: "Nemotron 3.5 Bolt 74B-A9B", date: "2026-10-15", note: "Announced alongside Super VL; 74B MoE (9B active), quantized to fit 24GB at 2-bit; paired with the RTX Spark laptop launch; Artificial Analysis Intelligence Index 21.4 vs. Super VL's 26.5" },
+      { version: "Nemotron 3.5 Embed + Rerank + Parse", date: "2026-10-21", note: "Open retrieval models for RAG/agents: Embed (8B/1B BF16, 1B NVFP4), Rerank 8B, and a 631M-param Parse model; NVIDIA reports ~13-14% lower agentic token cost per query when paired with Rerank" },
+      { version: "Nemotron 3.5 Transcribe", date: "2026-10-29", note: "Open-weight speech-recognition model; 30B MoE (~4B active)" },
     ],
-    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, now extending into vision-language with Super VL and a quantized edge tier with Bolt, both announced the same day."
+    notes: "Roughly annual flagship drops in 2023-2024, then an accelerating cadence: a burst of reasoning-focused releases (Llama Nemotron, Nano 2) through 2025, followed by a fast three-tier Nemotron 3 rollout (Nano → Super → Ultra → Lightning) at ~2-3 month intervals through 2026, extending into vision-language with Super VL and a quantized edge tier with Bolt, then into retrieval (Embed/Rerank/Parse) and speech (Transcribe) within weeks."
   },
   {
     id: "upstage",
@@ -558,8 +546,9 @@ const MODELS = [
       { version: "Robostral Navigate", date: "2026-07-08", note: "First embodied-robotics model; 8B params, navigates from a single RGB camera plus plain-language instructions (no LiDAR/depth); 76.6% success rate on R2R-CE unseen split" },
       { version: "Shieldstral 1.0", date: "2026-08-04", note: "3B open-weight multimodal safety/moderation classifier; scores text and images against plain-language policies at inference time, no retraining needed; Apache 2.0, runs on a single 16GB GPU" },
       { version: "Mistral Large 4 (Preview)", date: "2026-10-06", note: "Public preview of 1.05T-param multimodal MoE (49B active); Artificial Analysis Intelligence Index 38; open weights planned for later in October" },
+      { version: "Mistral Large 4 (open weights)", date: "2026-10-29", note: "Open-weight release of the 1.05T-param ('Le Chonk') model on Hugging Face (mistralai/Mistral-Large-4-1T-A52B, plus an NVFP4-quantized variant); Mistral Ecosystem Open-Weight License" },
     ],
-    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 returns to the flagship line as a hosted preview ahead of an open-weight release."
+    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 returned to the flagship line as a hosted preview, followed three weeks later by an open-weight release."
   },
   {
     id: "stepfun",
