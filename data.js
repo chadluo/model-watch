@@ -56,8 +56,9 @@ const MODELS = [
     description: "OpenAI's balanced middle tier between Sol and Luna.",
     releases: [
       { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+      { version: "GPT-6.1 Terra", date: "2026-10-26", note: "Mid-tier upgrade replacing GPT-5.6 Terra; $1/$5 per MTok, half the price of GPT-6.1 Sol and 50% cheaper than GPT-5.6 Terra; ~15pt improvement on a computer-use eval vs. GPT-5.6 Terra" },
     ],
-    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+    notes: "Two releases so far, 122 days apart; Terra finally refreshed into the GPT-6 generation after lagging Sol and Luna."
   },
   {
     id: "openai-luna",
