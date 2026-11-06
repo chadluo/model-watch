@@ -71,8 +71,9 @@ const MODELS = [
     releases: [
       { version: "GPT-5.6 Luna", date: "2026-06-26", note: "Fast/low-cost tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
       { version: "GPT-6 Luna", date: "2026-09-22", note: "Lightweight high-volume tier for summarization/extraction; $0.10/$0.50 per MTok, half the price of GPT-5.6 Luna" },
+      { version: "GPT-6 Luna Decisions", date: "2026-10-06", note: "Structured Decisions API built on GPT-6 Luna; returns short typed answers instead of generated text, ~10x faster than the Responses API; launched in public beta" },
     ],
-    notes: "Two releases so far, 88 days apart — too short a history to call a firm cadence."
+    notes: "Three releases so far; Luna Decisions is a structured-output API surface on the same GPT-6 Luna model rather than a new checkpoint."
   },
   {
     id: "openai-oss",
