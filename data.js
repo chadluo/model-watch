@@ -56,8 +56,9 @@ const MODELS = [
     description: "OpenAI's balanced middle tier between Sol and Luna.",
     releases: [
       { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+      { version: "GPT-6.1 Terra", date: "2026-10-26", note: "First GPT-6-generation Terra release; roughly matches GPT-6 Astra at about a tenth of the price ($1/$5 per MTok, half of Sol); Terminal-Bench 4.0 50.3% vs. 21.5% for GPT-5.6 Terra; rated 'Critical' cyber risk" },
     ],
-    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+    notes: "Terra sat out the initial GPT-6 launch (Sol and Luna only) before catching up four months after GPT-5.6 Terra with the GPT-6.1 release."
   },
   {
     id: "openai-luna",
@@ -171,7 +172,7 @@ const MODELS = [
     tier: "frontier",
     description: "Google DeepMind's top-end Gemini 4 Argon tier, positioned alongside Claude Fable and OpenAI Astra for the most demanding coding, knowledge-work and cyber-defense tasks.",
     releases: [
-      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
+      { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, reached general availability in the Gemini app and API on 2026-10-13" },
     ],
     notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
   },
@@ -415,24 +416,9 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro + K3.1 Pro Highspeed", date: "2026-10-23", note: "1M-token context; Highspeed variant runs 2-3x faster at same capability; live on Kimi.com, Kimi Work, Kimi Code and the API; open weights due 2026-11-04" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
-  },
-  {
-    id: "poolside",
-    name: "Poolside",
-    lab: "Poolside AI",
-    labColor: "#0d9488",
-    icon: "≈",
-    tier: "open",
-    description: "Poolside AI's coding-focused model family, from the original closed Malibu/Point pair to the open-weight Laguna series built for agentic software engineering.",
-    releases: [
-      { version: "Malibu + Point", date: "2024-12-04", note: "First public models, announced via AWS re:Invent; Malibu for deep coding/reasoning, Point for fast code completion; launched on Amazon EC2, Bedrock availability announced as 'coming soon'" },
-      { version: "Laguna XS.2 + M.1", date: "2026-04-28", note: "Second-generation family debut; XS.2 is a 33B-A3B open-weight (Apache 2.0) model for local agentic coding, M.1 a 225B-A23B proprietary flagship; both free for a limited time via API/OpenRouter" },
-      { version: "Laguna XS 2.1", date: "2026-07-02", note: "Update to the 33B-A3B open-weight tier; adds native reasoning between tool calls, 256K context" },
-      { version: "Laguna S 2.1", date: "2026-07-21", note: "118B-A8B open-weight model (OpenMDW-1.1 license); 1M context; matches models several times its size on Terminal-Bench 2.1/SWE-Bench Pro; free endpoint on OpenRouter" },
-    ],
-    notes: "Poolside shipped Malibu 2.1 and 2.2 updates through 2025 (exact dates unconfirmed) before pivoting to the open-weight Laguna family in April 2026; the multi-year Malibu-to-Laguna gap reflects a generational architecture change rather than typical cadence. Laguna itself has shipped on a roughly monthly-to-bimonthly rhythm since (XS.2/M.1 → XS 2.1 → S 2.1)."
   },
   {
     id: "tencent",
@@ -558,8 +544,9 @@ const MODELS = [
       { version: "Robostral Navigate", date: "2026-07-08", note: "First embodied-robotics model; 8B params, navigates from a single RGB camera plus plain-language instructions (no LiDAR/depth); 76.6% success rate on R2R-CE unseen split" },
       { version: "Shieldstral 1.0", date: "2026-08-04", note: "3B open-weight multimodal safety/moderation classifier; scores text and images against plain-language policies at inference time, no retraining needed; Apache 2.0, runs on a single 16GB GPU" },
       { version: "Mistral Large 4 (Preview)", date: "2026-10-06", note: "Public preview of 1.05T-param multimodal MoE (49B active); Artificial Analysis Intelligence Index 38; open weights planned for later in October" },
+      { version: "Mistral Large 4", date: "2026-10-29", note: "Full open-weight release of the 1.05T-param multimodal MoE under the Mistral Ecosystem Open-Weight License (modified MIT); weights on Hugging Face plus API for on-prem deployment" },
     ],
-    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 returns to the flagship line as a hosted preview ahead of an open-weight release."
+    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 graduated from hosted preview (Oct 6) to full open-weight release (Oct 29) in under a month."
   },
   {
     id: "stepfun",
