@@ -56,8 +56,9 @@ const MODELS = [
     description: "OpenAI's balanced middle tier between Sol and Luna.",
     releases: [
       { version: "GPT-5.6 Terra", date: "2026-06-26", note: "Balanced tier of the three-tier 5.6 family; initially limited preview, fully public 2026-07-09" },
+      { version: "GPT-6.1 Terra", date: "2026-10-26", note: "First Terra refresh of the GPT-6 generation; 3x faster computer use than Astra/Sol at half the price ($1/$5 per MTok); low-effort error rate fell from 53.6% to 16.7%" },
     ],
-    notes: "Single release so far — Terra has not been refreshed in the GPT-6 generation."
+    notes: "Two releases, 122 days apart from GPT-5.6 Terra to GPT-6.1 Terra — the first refresh in the GPT-6 generation."
   },
   {
     id: "openai-luna",
@@ -415,24 +416,9 @@ const MODELS = [
       { version: "Kimi K2.7 Code", date: "2026-06-12", note: "Coding-specialized; 30% lower reasoning-token usage, +21.8% on Kimi Code Bench v2 vs K2.6" },
       { version: "Kimi K3", date: "2026-07-16", note: "2.8T param MoE, largest open-source model to date; native 1M-token context via Kimi-Linear attention; full weights due July 27" },
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
+      { version: "Kimi K3.1 Pro", date: "2026-10-23", note: "Post-trained K3 refresh with 1M context, launched alongside a faster K3.1 Pro Highspeed variant; Moonshot reports 65.7% on Terminal-Bench 4.0, near Opus 5.5's 66.4%" },
     ],
-    notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
-  },
-  {
-    id: "poolside",
-    name: "Poolside",
-    lab: "Poolside AI",
-    labColor: "#0d9488",
-    icon: "≈",
-    tier: "open",
-    description: "Poolside AI's coding-focused model family, from the original closed Malibu/Point pair to the open-weight Laguna series built for agentic software engineering.",
-    releases: [
-      { version: "Malibu + Point", date: "2024-12-04", note: "First public models, announced via AWS re:Invent; Malibu for deep coding/reasoning, Point for fast code completion; launched on Amazon EC2, Bedrock availability announced as 'coming soon'" },
-      { version: "Laguna XS.2 + M.1", date: "2026-04-28", note: "Second-generation family debut; XS.2 is a 33B-A3B open-weight (Apache 2.0) model for local agentic coding, M.1 a 225B-A23B proprietary flagship; both free for a limited time via API/OpenRouter" },
-      { version: "Laguna XS 2.1", date: "2026-07-02", note: "Update to the 33B-A3B open-weight tier; adds native reasoning between tool calls, 256K context" },
-      { version: "Laguna S 2.1", date: "2026-07-21", note: "118B-A8B open-weight model (OpenMDW-1.1 license); 1M context; matches models several times its size on Terminal-Bench 2.1/SWE-Bench Pro; free endpoint on OpenRouter" },
-    ],
-    notes: "Poolside shipped Malibu 2.1 and 2.2 updates through 2025 (exact dates unconfirmed) before pivoting to the open-weight Laguna family in April 2026; the multi-year Malibu-to-Laguna gap reflects a generational architecture change rather than typical cadence. Laguna itself has shipped on a roughly monthly-to-bimonthly rhythm since (XS.2/M.1 → XS 2.1 → S 2.1)."
+    notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since, with K3.1 Pro following K2.8 Preview six weeks later."
   },
   {
     id: "tencent",
@@ -451,8 +437,9 @@ const MODELS = [
       { version: "Hunyuan 2.0 (HY 2.0)", date: "2025-12-05", note: "406B total / 32B active MoE; 256K context; Think and Instruct variants; major reasoning/coding gains" },
       { version: "Hy3", date: "2026-07-06", note: "Open-weight MoE, 295B total / 21B active + 3.8B MTP layer; 256K context; Apache 2.0, no usage restrictions" },
       { version: "Hy4-preview", date: "2026-08-28", note: "770B total / 49B active MoE; 1M context; Apache 2.0; 85.4 Terminal-Bench 2.1; DeepSWE jumped 28.0→64.3" },
+      { version: "Hy4", date: "2026-11-04", note: "Full GA release adds vision and computer-use on top of the August preview, trained on tools like Blender/CAD; free WorkBuddy access through Nov 15" },
     ],
-    notes: "Roughly annual cadence 2023-2024, then accelerating through 2025-2026 as Tencent moved to a numbered open-weight \"Hy\" series — gaps have compressed from ~12 months to ~7-12 weeks between the latest releases."
+    notes: "Roughly annual cadence 2023-2024, then accelerating through 2025-2026 as Tencent moved to a numbered open-weight \"Hy\" series — gaps have compressed from ~12 months to ~7-12 weeks between the latest releases, with the full Hy4 GA following its preview after about 10 weeks."
   },
   {
     id: "nvidia",
@@ -513,53 +500,6 @@ const MODELS = [
       { version: "Jev 1.14", date: "2026-10-14", note: "Opt-in 'danger zone' experimental features: composable image inputs, a new bounding-box 'box' response type, and longer context; off by default and not yet recommended for production" },
     ],
     notes: "Two releases so far: Jev 1.13 launched with TypeSafe's public debut, then Jev 1.14 followed about a month later. New entrant to OpenRouter's top-20 usage rankings as of September 2026; not a conventional text-generating LLM, so 'release cadence' framing may not map cleanly onto this family long-term."
-  },
-  {
-    id: "xai",
-    name: "Grok",
-    lab: "xAI",
-    labColor: "#ec4899",
-    icon: "✕",
-    tier: "frontier",
-    description: "xAI's Grok family — Elon Musk's AI lab, integrated into SpaceX and rebranded SpaceXAI in mid-2026 (Grok kept its name). Frontier chat, coding, and agentic models spanning Grok-1 through the fast-iterating 4.x line.",
-    releases: [
-      { version: "Grok-1", date: "2023-11-03", note: "First Grok chatbot released to X Premium+ subscribers" },
-      { version: "Grok-1 (open weights)", date: "2024-03-11", note: "314B MoE base checkpoint open-sourced under Apache 2.0" },
-      { version: "Grok-2", date: "2024-08-13", note: "Grok-2 and Grok-2 mini launched, plus Grok-2 Image text-to-image model" },
-      { version: "Grok-3", date: "2025-02-17", note: "First dedicated reasoning model; trained on 200k+ GPU Colossus supercluster; DeepSearch launched alongside" },
-      { version: "Grok-4", date: "2025-07-09", note: "Launched via livestream; large context window, built-in coding, multimodal" },
-      { version: "Grok 4.5", date: "2026-07-08", note: "1.5T-param model trained with Cursor coding data; wider grok.com/X rollout followed two weeks later" },
-      { version: "Grok 4.6", date: "2026-08-12", note: "1.5T-param update per xAI's official announcement" },
-      { version: "Grok 4.7", date: "2026-09-21", note: "2.1T-param frontier model for coding, agentic, and knowledge work" },
-    ],
-    notes: "xAI accelerated from 6-12 month gaps (Grok-1 through Grok-4) to a roughly 6-10 week cadence through 2026. The company merged into SpaceX and rebranded SpaceXAI in July 2026."
-  },
-  {
-    id: "mistral",
-    name: "Mistral",
-    lab: "Mistral AI",
-    labColor: "#fa520f",
-    icon: "⟐",
-    tier: "open",
-    description: "French AI lab Mistral AI's model family, mixing Apache-licensed open-weight releases with proprietary Large/Medium flagships; spans dense, MoE, vision, reasoning, and coding variants.",
-    releases: [
-      { version: "Mistral 7B", date: "2023-09-27", note: "First public model; 7.3B params, base and instruct variants" },
-      { version: "Mixtral 8x7B", date: "2023-12-11", note: "Sparse MoE activating 2 of 8 experts per token; matched or beat GPT-3.5 on many benchmarks" },
-      { version: "Mistral Large", date: "2024-02-26", note: "First flagship closed model; top-3 on MMLU at release behind GPT-4 and Gemini Ultra" },
-      { version: "Mistral NeMo", date: "2024-07-18", note: "12B model co-developed with NVIDIA; 128K context; became one of the most widely used free/open Mistral models" },
-      { version: "Mistral Large 2", date: "2024-07-24", note: "Second-gen flagship; improved multilingual, code and reasoning performance" },
-      { version: "Pixtral 12B", date: "2024-09-11", note: "First public vision-language model" },
-      { version: "Mistral Large 2.1 + Pixtral Large", date: "2024-11-18", note: "124B multimodal Pixtral Large alongside a Large 2.1 refresh (since deprecated)" },
-      { version: "Mistral Small 3", date: "2025-01-30", note: "24B Apache 2.0 model for local deployment and low-latency workloads" },
-      { version: "Magistral", date: "2025-06-10", note: "First dedicated reasoning family, Small and Medium variants" },
-      { version: "Mistral Large 3", date: "2025-12-02", note: "675B MoE (41B active) flagship, part of the Mistral 3 generation alongside new 14B/8B/3B dense models; Apache 2.0, 256K context" },
-      { version: "Mistral Small 4", date: "2026-03-16", note: "Unified Magistral (reasoning), Pixtral (vision) and Devstral (agentic coding) into one 119B MoE model; 256K context" },
-      { version: "Mistral Medium 3.5", date: "2026-04-28", note: "128B dense multimodal 'balance point' model with adjustable reasoning effort" },
-      { version: "Robostral Navigate", date: "2026-07-08", note: "First embodied-robotics model; 8B params, navigates from a single RGB camera plus plain-language instructions (no LiDAR/depth); 76.6% success rate on R2R-CE unseen split" },
-      { version: "Shieldstral 1.0", date: "2026-08-04", note: "3B open-weight multimodal safety/moderation classifier; scores text and images against plain-language policies at inference time, no retraining needed; Apache 2.0, runs on a single 16GB GPU" },
-      { version: "Mistral Large 4 (Preview)", date: "2026-10-06", note: "Public preview of 1.05T-param multimodal MoE (49B active); Artificial Analysis Intelligence Index 38; open weights planned for later in October" },
-    ],
-    notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 returns to the flagship line as a hosted preview ahead of an open-weight release."
   },
   {
     id: "stepfun",
