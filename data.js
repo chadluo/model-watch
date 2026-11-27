@@ -9,8 +9,9 @@ const MODELS = [
     description: "OpenAI's top-end GPT-6 Astra tier, positioned above Sol for the most demanding reasoning and agentic work.",
     releases: [
       { version: "GPT-6 Astra", date: "2026-09-03", note: "First OpenAI model rated 'Critical' cyber risk (up from 'High'); 1M token context" },
+      { version: "GPT-6.2 Astra", date: "2026-11-17", note: "20% cheaper than GPT-6 Astra ($8/$40 per MTok); first externally released OpenAI model at 'High' for AI self-improvement; Critical cyber / High bio thresholds; shipped seven weeks after OpenAI scrapped a planned GPT-6.1 Astra over safety/alignment; Ultrafast tier at launch" },
     ],
-    notes: "Single release so far — no cadence history yet. GPT-6.1 Sol (Sept 29) nearly matches Astra at one-fifth the price."
+    notes: "Two releases so far, 75 days apart — too short a history to call a firm cadence. GPT-6.1 Astra was cancelled in October after failing internal safety checks."
   },
   {
     id: "openai-sol",
@@ -43,6 +44,7 @@ const MODELS = [
       { version: "GPT-5.6-Cyber", date: "2026-08-10", note: "Gated cybersecurity variant of Sol with relaxed safeguards for vetted defenders; part of expanded Daybreak Red/Blue access program" },
       { version: "GPT-6 Sol", date: "2026-09-22", note: "Balanced coding/reasoning tier; ~half the factual-mistake rate of GPT-5.6 Sol at half the price ($2/$10 per MTok)" },
       { version: "GPT-6.1 Sol", date: "2026-09-29", note: "Near-Astra performance on agentic coding, computer use and professional work at one-fifth of Astra's price ($2/$10 per MTok); Ultrafast tier (up to 8x faster in Codex) to follow" },
+      { version: "GPT-6.2 Sol", date: "2026-11-17", note: "Efficient everyday tier, same $2/$10 per MTok as GPT-6.1 Sol; +5.3 points on GDPval v2 over 6.1 Sol; within 0.5 points of Astra on FrontierCode 2.0 at ~1/5 the cost; Ultrafast available at launch" },
     ],
     notes: "OpenAI accelerated to near-monthly releases across both GPT and o-series lines since mid-2025. Sol inherits the full GPT history; the Astra/Sol/Terra/Luna tier split began with GPT-5.6."
   },
@@ -159,8 +161,9 @@ const MODELS = [
     releases: [
       { version: "Claude Fable 5", date: "2026-06-09", suspended: false, note: "First 'Mythos-class' model for general users; briefly suspended June 12 under US export-control directive, restored globally July 1, 2026; biology-related safety classifiers retuned Aug 7, cutting fallbacks ~85%" },
       { version: "Claude Fable 5.1", date: "2026-09-01", note: "Released alongside Claude Mythos 5.1; ~25% cheaper cache-read pricing; retuned cybersecurity safeguards cut false positives 60%, permitting vulnerability discovery" },
+      { version: "Claude Fable 5.2 + Claude Mythos 5.2", date: "2026-11-09", note: "Same underlying model: Fable 5.2 (API id claude-fable-5-2) has cyber/bio safeguards for all users; Mythos 5.2 lacks them and is gated to vetted organizations. $8/$40 per MTok, up to 30% faster than 5.1; FrontierCode 2.0 49.1% (Opus 5.5 45.5%); ~55% fewer safety-classifier blocks than 5.1" },
     ],
-    notes: "Two releases so far: 84 days from Fable 5 to Fable 5.1 — too short a history to call a firm cadence."
+    notes: "Three releases so far: 84 days from Fable 5 to 5.1, then 69 days to 5.2 — too short a history to call a firm cadence. Each release since 5.1 ships with a Mythos twin."
   },
   {
     id: "gemini-argon",
@@ -173,7 +176,46 @@ const MODELS = [
     releases: [
       { version: "Gemini 4 Argon", date: "2026-09-30", note: "77.9% on DeepSWE v1.1; led 13 of 19 benchmark rows; 1M output tokens; introductory $2/$10 per MTok (to double to $4/$20); initially limited to Fairwind security partners, with paid API and Google AI Ultra access to follow" },
     ],
-    notes: "Single release so far — no cadence history yet. Opens a new top tier above Gemini Flash; Google has not announced a Pro-tier successor."
+    notes: "Single release so far — no cadence history yet. Opens the Gemini 4 line, which uses element codenames instead of Pro/Flash; Gemini Neon replaced Argon on 2026-11-18."
+  },
+  {
+    id: "gemini-carbon",
+    name: "Gemini Carbon",
+    lab: "Google DeepMind",
+    labColor: "#4285f4",
+    icon: "▣",
+    tier: "frontier",
+    description: "Google DeepMind's Gemini 4 Carbon tier, built for the hardest, long-horizon work; the 'Code & complex work' pick in the Gemini app.",
+    releases: [
+      { version: "Gemini 4 Carbon", date: "2026-11-10", note: "Top Gemini 4 tier for tasks that test the limits of model intelligence; paid-tier API only; introductory $2/$10 per MTok until Nov 30, then $4/$20" },
+    ],
+    notes: "Single release so far — no cadence history yet. Gemini 4 Neon (Nov 18) performs comparably at lower cost."
+  },
+  {
+    id: "gemini-neon",
+    name: "Gemini Neon",
+    lab: "Google DeepMind",
+    labColor: "#4285f4",
+    icon: "✺",
+    tier: "frontier",
+    description: "Google DeepMind's Gemini 4 Neon tier: frontier-level reasoning at Flash-like speed, positioned between Hydrogen and Carbon.",
+    releases: [
+      { version: "Gemini 4 Neon", date: "2026-11-18", note: "Replaces Argon; $3/$15 per MTok (25% under Carbon's post-Nov 30 rate); 1M context, four thinking levels; Artificial Analysis Intelligence Index 61 (#3), Coding Agent Index 58.6 (#1); AI Pro/Ultra in the Gemini app and Antigravity" },
+    ],
+    notes: "Single release so far — no cadence history yet."
+  },
+  {
+    id: "gemini-hydrogen",
+    name: "Gemini Hydrogen",
+    lab: "Google DeepMind",
+    labColor: "#4285f4",
+    icon: "○",
+    tier: "frontier",
+    description: "Google DeepMind's fast, low-cost Gemini 4 Hydrogen tier for everyday help; the Flash-class replacement, available on free tiers.",
+    releases: [
+      { version: "Gemini 4 Hydrogen", date: "2026-11-12", note: "Everyday-help tier replacing Flash in the Gemini app; ~$1.50/$7.50 per MTok (secondary reports); 1M context, four thinking levels; available on all tiers including free" },
+    ],
+    notes: "Single release so far — no cadence history yet. Google teased a Gemini 4 'Helium' (possible Flash-Lite successor) but has confirmed no date."
   },
   {
     id: "gemini-flash",
@@ -312,6 +354,7 @@ const MODELS = [
       { version: "Qwen3.8-Flash-Next", date: "2026-08-26", note: "Open-weight 125B MoE (~6B active); early preview of upcoming Qwen4 architecture" },
       { version: "Qwen3.8-Max-0902", date: "2026-09-02", note: "Post-trained snapshot of Qwen3.8-Max for coding and multi-agent Cowork tasks; CodeArena score +22 points" },
       { version: "Qwen3.8-Omni-Flash", date: "2026-09-18", note: "Native omni-modal model (text/image/audio/video) with 1M context, adjustable thinking, tool/web-search use; +26% over Qwen3.5-Omni-Plus on audio/video benchmarks; API-only, weights not open-sourced" },
+      { version: "Qwen4-Max", date: "2026-11-16", note: "First Qwen4 model; closed-weight 2.4T-param MoE (~71B active), native vision, 1M context; Alibaba claims 35% fewer tokens and ~60% lower cost per task than Qwen3.8-Max; smaller open-weight Qwen4 models promised, no dates" },
     ],
     notes: "Qwen has become one of the most widely deployed open-weight families. Qwen3.x continues rapid iteration into 2026."
   },
@@ -417,22 +460,6 @@ const MODELS = [
       { version: "Kimi K2.8 Preview", date: "2026-09-11", note: "Mid-tier model between K2.7 Code and K3; 1M-token context (up from 262K), multimodal text/image/video input, adjustable thinking (low/high/max), performance near K3" },
     ],
     notes: "Kimi pioneered long-context chat in China, then pivoted to open-sourcing frontier-scale agentic MoE models starting with K2 in mid-2025, sustaining a roughly bimonthly cadence since."
-  },
-  {
-    id: "poolside",
-    name: "Poolside",
-    lab: "Poolside AI",
-    labColor: "#0d9488",
-    icon: "≈",
-    tier: "open",
-    description: "Poolside AI's coding-focused model family, from the original closed Malibu/Point pair to the open-weight Laguna series built for agentic software engineering.",
-    releases: [
-      { version: "Malibu + Point", date: "2024-12-04", note: "First public models, announced via AWS re:Invent; Malibu for deep coding/reasoning, Point for fast code completion; launched on Amazon EC2, Bedrock availability announced as 'coming soon'" },
-      { version: "Laguna XS.2 + M.1", date: "2026-04-28", note: "Second-generation family debut; XS.2 is a 33B-A3B open-weight (Apache 2.0) model for local agentic coding, M.1 a 225B-A23B proprietary flagship; both free for a limited time via API/OpenRouter" },
-      { version: "Laguna XS 2.1", date: "2026-07-02", note: "Update to the 33B-A3B open-weight tier; adds native reasoning between tool calls, 256K context" },
-      { version: "Laguna S 2.1", date: "2026-07-21", note: "118B-A8B open-weight model (OpenMDW-1.1 license); 1M context; matches models several times its size on Terminal-Bench 2.1/SWE-Bench Pro; free endpoint on OpenRouter" },
-    ],
-    notes: "Poolside shipped Malibu 2.1 and 2.2 updates through 2025 (exact dates unconfirmed) before pivoting to the open-weight Laguna family in April 2026; the multi-year Malibu-to-Laguna gap reflects a generational architecture change rather than typical cadence. Laguna itself has shipped on a roughly monthly-to-bimonthly rhythm since (XS.2/M.1 → XS 2.1 → S 2.1)."
   },
   {
     id: "tencent",
@@ -558,6 +585,7 @@ const MODELS = [
       { version: "Robostral Navigate", date: "2026-07-08", note: "First embodied-robotics model; 8B params, navigates from a single RGB camera plus plain-language instructions (no LiDAR/depth); 76.6% success rate on R2R-CE unseen split" },
       { version: "Shieldstral 1.0", date: "2026-08-04", note: "3B open-weight multimodal safety/moderation classifier; scores text and images against plain-language policies at inference time, no retraining needed; Apache 2.0, runs on a single 16GB GPU" },
       { version: "Mistral Large 4 (Preview)", date: "2026-10-06", note: "Public preview of 1.05T-param multimodal MoE (49B active); Artificial Analysis Intelligence Index 38; open weights planned for later in October" },
+      { version: "Mistral Large 4 (open weights)", date: "2026-10-29", note: "Open-weight release of Large 4 (~1T params, ~50B active) three weeks after the API-only preview; Mistral Ecosystem Open-Weight license (modified MIT); NVFP4 checkpoint also published" },
     ],
     notes: "Driven by heavy usage of the free, 2024-vintage Mistral NeMo model rather than Mistral's newer flagships; kept on this list as a major independent lab regardless of OpenRouter share. Large 4 returns to the flagship line as a hosted preview ahead of an open-weight release."
   },
@@ -579,5 +607,38 @@ const MODELS = [
       { version: "Step-5 Preview", date: "2026-10-08", note: "Flagship agentic model; 600B MoE (27B active), 1M context; strong on software engineering and finance; open weights planned to follow" },
     ],
     notes: "StepFun moved from roughly annual Step-1/Step-2 drops in 2024 to a fast, roughly quarterly Flash-tier cadence through 2025-2026, culminating in the trillion-scale-adjacent Step-5 Preview."
+  },
+  {
+    id: "thinking-machines",
+    name: "Thinking Machines Inkling",
+    lab: "Thinking Machines Lab",
+    labColor: "#e11d48",
+    icon: "◐",
+    tier: "open",
+    description: "Thinking Machines Lab's Inkling open-weight family: natively multimodal MoE models built as customization bases and served through the Tinker platform.",
+    releases: [
+      { version: "Inkling", date: "2026-07-15", note: "975B MoE (41B active), 1M context, trained on 45T text/image/audio/video tokens; open weights on Hugging Face plus Tinker and partner APIs; positioned as a fine-tuning base, not the strongest overall model" },
+      { version: "Inkling 2 Small", date: "2026-11-05", note: "594B MoE (17B active), 256K context, image input; launched on Tinker with closed weights, weights published on Hugging Face Nov 12; self-reported SWE-bench Pro v2 (Hard) 86.3%" },
+      { version: "Inkling 2 Mini", date: "2026-11-20", note: "Looped transformer, 26.4B total params, ~20GB in NVFP4/MXFP8 so it runs on a 32GB laptop; open weights; DeepSWE v1.1 48.2%, Terminal Bench v2.1 71.6%" },
+    ],
+    notes: "Inkling-Small (276B MoE, 12B active) previewed with Inkling and shipped about two weeks later; exact date unconfirmed, so it is not listed. The Inkling 2 generation arrived in November, with Small and Mini 15 days apart."
+  },
+  {
+    id: "baidu",
+    name: "Baidu ERNIE",
+    lab: "Baidu",
+    labColor: "#2932e1",
+    icon: "◭",
+    tier: "chinese",
+    description: "Baidu's ERNIE family, from the ERNIE 4.5/X1 generation (open-sourced under Apache 2.0 in 2025) through the multimodal ERNIE 5 line and the new ERNIE 5.5 Flash tier.",
+    releases: [
+      { version: "ERNIE 4.5 + ERNIE X1", date: "2025-03-16", note: "Native multimodal ERNIE 4.5 plus the X1 deep-reasoning model" },
+      { version: "ERNIE 4.5 (open source)", date: "2025-06-30", note: "ERNIE 4.5 family open-sourced under Apache 2.0" },
+      { version: "ERNIE X1.1", date: "2025-09-09", note: "Updated reasoning model" },
+      { version: "ERNIE 5.0 Preview", date: "2025-11-13", note: "Unveiled at Baidu World; natively omni-modal flagship" },
+      { version: "ERNIE 5.0", date: "2026-01-22", note: "Formal release of the ERNIE 5.0 flagship" },
+      { version: "ERNIE 5.5 Flash Preview", date: "2026-11-11", note: "First post-trained ERNIE 5.5 Flash checkpoint; 280B MoE (14B active), 1M context, text in/out; free on OpenRouter, where it reached the weekly top 20; Baidu calls it an intermediate checkpoint with a final Flash release to follow" },
+    ],
+    notes: "ERNIE 5.1 (late April / early May 2026) is omitted because sources disagree on its date. Roughly quarterly to semiannual cadence, with a Flash tier added in late 2026."
   },
 ];
