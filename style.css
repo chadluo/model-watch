@@ -3,6 +3,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  color-scheme: dark;
   --bg: #0d0f13;
   --bg2: #141720;
   --bg3: #1c2030;
@@ -120,6 +121,9 @@ header {
   color: var(--text);
   vertical-align: middle;
 }
+.models-table tbody td:first-child,
+.models-table tbody td:last-child { white-space: nowrap; }
+.models-table th:last-child, .models-table td:last-child { min-width: 9rem; }
 .models-table tbody tr:hover td { background: var(--bg2); }
 .td-version { margin-right: 0.5rem; }
 .td-date { color: var(--text-muted); }
