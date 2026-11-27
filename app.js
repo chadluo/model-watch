@@ -32,7 +32,6 @@ function renderTable(items) {
     return `
 <tr data-tier="${model.tier}">
   <td style="color:${model.labColor}">${model.lab}</td>
-  <td>${model.name}</td>
   <td><span class="td-version">${m.latestRelease.version}</span><span class="td-date">${fmtDate(m.latestRelease.date)}</span></td>
   <td>${Math.round(m.daysSinceLast)}d</td>
   <td>${barVal !== null ? `<progress value="${barVal}" max="1"></progress>` : ''}</td>
@@ -49,8 +48,7 @@ function renderTable(items) {
     <thead>
       <tr>
         <th>Developer</th>
-        <th>Model</th>
-        <th>Latest Release</th>
+        <th>Latest Model</th>
         <th>Since</th>
         <th>Meter</th>
         <th>Avg Cycle</th>
